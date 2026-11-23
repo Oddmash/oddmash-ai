@@ -16,3 +16,5 @@ Specify the trigger, what the user should notice, the committed state, and what 
 Keep text and controls readable. State, measurement, and focus changes take effect as soon as they are ready. For reduced motion, preserve the same meaning with an immediate state, clear shape, focus indicator, or copy.
 
 Use the [implementation skill](../oddmash-motion-implementation/SKILL.md) to keep the chosen movement interruptible and verify both motion preferences.
+
+- Specify loading shimmer, progress, transition interruption and motion-free equivalents only when meaningful. Never delay data or error feedback for animation; avoid flicker, excessive motion and indefinite decorative loops. Use [accessibility](../oddmash-accessibility/SKILL.md) for applicable pause and flashing requirements.
