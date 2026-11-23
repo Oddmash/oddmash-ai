@@ -18,4 +18,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for installation and maintenance.
 ## Integration
 
 Skills remain independently installable for people and coding assistants. [Oddmash Agents](https://github.com/Oddmash/oddmash-agents) owns executable automation and may adopt reviewed skill revisions without copying instructions. Organization-wide authority and collaboration rules live in [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). Agent deployments and skill updates have separate lifecycles.
-
