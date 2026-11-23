@@ -7,6 +7,8 @@ description: Deliver a scoped Oddmash website or frontend change, from repositor
 
 Inspect the target checkout, remote, base branch, and user changes. Read the target AGENTS.md and use its runtime and verification commands.
 
+- Apply the organization engineering conventions to new paths and symbols. Use kebab-case file/directory names, preserve framework and public contract exceptions, match scoped formatting/lint/type rules, and verify import casing on a case-sensitive environment when relevant.
+- Before creating or substantially redesigning a landing or docs site, use [brand design](../oddmash-brand-design/SKILL.md) and its product-specific website direction reference; use the product type to choose hierarchy, actual proof and visitor task rather than a common template.
 - Decide which boundary owns the change. Use existing Oddmash UI controls when their interaction contract fits, and keep product-specific layout, branding, and behavior with the consumer. Use the package's local maintenance instructions for public exports or token changes.
 - Follow the normal application entry point. Preserve supported URLs and interaction contracts. Match tests to risk: native input and keyboard behavior, narrow layouts, rendering and hydration, fonts, or deployment base paths as applicable.
 - For documentation-led sites, reuse authoritative source documents at build time where practical. Give readers native navigation, headings, code samples and internal links; verify all rendered routes and cross-page anchors. Do not send users out to a GitHub Markdown file for the main getting-started flow.
