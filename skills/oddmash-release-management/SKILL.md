@@ -14,3 +14,12 @@ Read the target repository's release policy, current version, remote state, open
 - Record exact revision, release URL, user-visible changes, verification gaps, and rollback or recovery path. If a failure occurs, preserve the previous working release and report the concrete blocker.
 
 Use [quality assurance](../oddmash-quality-assurance/SKILL.md) for evidence and [product marketing](../oddmash-product-marketing/SKILL.md) for release communication.
+
+## Solo-maintainer launch gate
+
+Before reporting a change as release-ready, use [quality assurance](../oddmash-quality-assurance/SKILL.md) to record pass/fail/not applicable with reason/not verified for the exact revision.
+- Core journeys and edge states work, no unresolved material accessibility or functional regressions; applicable WCAG 2.2 AA checks have evidence.
+- Actual data processing and privacy/consent/rights flows agree with reviewed notices; applicable terms, acceptable-use, asset licensing, attribution and platform restrictions are addressed. Material legal uncertainty requires maintainer review, not an AI compliance declaration.
+- Verify environment configuration without exposing values, migrations and rollback, backup/restore readiness where applicable, health, monitoring, support contact and recovery. Check cost/quota constraints, failure communication and operational ownership for one maintainer.
+- Verify production-facing navigation, policy links, metadata, locale, indexing choices and public claims against the candidate. Keep private previews and test accounts private.
+- No known unresolved critical blockers or skipped required checks. Explicitly distinguish approved residual risks from unknowns; a skill cannot waive CI, legal review, permissions or launch authorization.

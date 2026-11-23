@@ -17,3 +17,6 @@ Read the product brief, known constraints, and relevant repository agreements. U
 - Capture the chosen direction, open decisions, non-goals, and a reviewable first slice. For pages, include the proposed first action and the concrete evidence visible before secondary content.
 
 Use [UX design](../oddmash-ux-design/SKILL.md) for task flows and [product growth](../oddmash-product-growth/SKILL.md) for feedback and experimentation after launch.
+
+- For a solo-maintained product, identify minimum operating scope before implementation: user-facing states, WCAG 2.2 AA target for web interfaces, data processing map, third-party asset/API rights, applicable policies, abuse prevention, operations cost, support contact, recovery and retirement. Mark each applicable, not applicable with reason, or unresolved.
+- Define acceptance evidence and an explicit launch gate using [UX design](../oddmash-ux-design/SKILL.md), [accessibility](../oddmash-accessibility/SKILL.md), [security and privacy](../oddmash-security-privacy/SKILL.md), [copyright and licensing](../oddmash-copyright-licensing/SKILL.md), and [release management](../oddmash-release-management/SKILL.md). Do not silently accept unknown legal or privacy decisions.

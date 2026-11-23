@@ -19,3 +19,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for installation and maintenance.
 ## Integration
 
 Skills remain independently installable for people and coding assistants. [Oddmash Agents](https://github.com/Oddmash/oddmash-agents) owns executable automation and may adopt reviewed skill revisions without copying instructions. Organization-wide authority and collaboration rules live in [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). Agent deployments and skill updates have separate lifecycles.
+
+## Solo-maintainer readiness
+
+Start with product planning and technical architecture, then use UX design to enumerate all applicable states. Apply WCAG 2.2 AA, privacy and copyright/terms reviews throughout implementation. Before release, use the quality assurance evidence matrix and release gate to identify verified, failed, inapplicable and unverified checks. Never treat a generated policy or automated accessibility scan as proof of compliance.

@@ -12,3 +12,5 @@ Inspect the rendered interface at representative desktop and narrow widths. Iden
 - Distinguish actions, selection, error and success visibly without relying on color alone.
 - Use intentional motion to demonstrate real changes; keep content legible and provide pause, reduced-motion and offscreen behavior.
 - Compare screenshots and actual tasks. Distinguish observed defects from aesthetic preferences.
+
+- Audit final geometry across skeleton, loading and loaded states, consistent control heights/padding/icon alignment, focus rings, truncation with accessible access to complete content, responsive spacing, safe areas, scroll and overlay layering. Compare empty/error and dense content alongside the happy path. Keep placeholders and decorative motion subordinate to meaningful content.

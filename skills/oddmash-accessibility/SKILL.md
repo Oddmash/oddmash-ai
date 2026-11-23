@@ -14,3 +14,14 @@ Verify the actual interface, not just markup. Prefer semantic HTML to custom ARI
 - Test keyboard, browser/device behavior and relevant assistive technologies where available. Automated tests supplement manual checks. Cite actual criteria and evidence; do not claim conformance from a scan alone.
 
 Reference: https://www.w3.org/TR/WCAG22/
+
+## WCAG 2.2 AA acceptance matrix
+
+Use the complete normative criteria, not only this shortlist; scope the entire task flow including dialogs, error states, authentication and third-party components. Record criterion, affected surface, test method, result and exceptions.
+
+- Perceivable: meaningful text alternatives (1.1.1), captions/transcripts as applicable, semantic relationships (1.3.1), non-color cues (1.4.1), normal text 4.5:1 and large text 3:1 (1.4.3), relevant non-text controls and visual states 3:1 (1.4.11), 200% text resize (1.4.4), 320 CSS px reflow with permitted exceptions (1.4.10), text spacing overrides (1.4.12) and dismissible, hoverable, persistent hover/focus content where applicable (1.4.13).
+- Operable: all functionality via keyboard, no keyboard traps (2.1.1/2.1.2), skip links or bypass mechanism, logical focus order and visible focus (2.4.1/2.4.3/2.4.7); focused items must not be completely concealed by author content (2.4.11). Provide non-drag alternatives (2.5.7) and 24×24 CSS px minimum pointer targets or a documented criterion exception (2.5.8). Prefer larger touch targets as a product goal.
+- Understandable: correct page and content languages, consistent navigation/help, labels and error identification/suggestions, review or reversal for qualifying consequential submissions, avoid redundant entry where required (3.3.7), and accessible authentication alternatives/assistance (3.3.8). Permit password managers and paste.
+- Robust: native names, roles, values and states (4.1.2); announce relevant status changes without forcing focus (4.1.3). Use aria-busy appropriately; keep skeleton decoration out of the accessibility tree and avoid repeated announcements.
+- Verify browser keyboard-only traversal, zoom/reflow, forced colors/high contrast where relevant, reduced motion, touch and representative screen-reader tasks (VoiceOver/NVDA/TalkBack as available). Add automated accessibility checks and focused regressions. Record unsupported tools and untested criteria; do not declare AA compliance without evaluating the full applicable scope.
+- Consult W3C normative text and understanding documents for criterion exceptions: https://www.w3.org/TR/WCAG22/ and https://www.w3.org/WAI/WCAG22/Understanding/ .
