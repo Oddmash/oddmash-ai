@@ -14,4 +14,6 @@ Read the product's visual baseline. For interfaces using Oddmash UI, inspect the
 
 For a motion brief, use the [motion design skill](../oddmash-motion-design/SKILL.md).
 
+For new or substantially revised product landing pages, select a framework suited to the product's content, interaction, hosting, and maintenance needs rather than standalone hand-authored HTML. Prefer a static-first framework such as Astro for content-led sites; reuse the product's existing framework when shared components, live demos, routing, or deployment justify it. Do not migrate an existing suitable framework without a demonstrated need. Verify the production build, deployment base path, real mobile and desktop renders, and asset/navigation links.
+
 - Review complete interaction states using actual token pairs in every supported theme, including skeleton, disabled, pending, warning, error, success, focus and selected. Check contrast and non-color cues with [accessibility](../oddmash-accessibility/SKILL.md); document font, icon and asset rights with [copyright and licensing](../oddmash-copyright-licensing/SKILL.md).
