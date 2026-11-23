@@ -19,6 +19,7 @@ Read the requirements, repository test commands, current behavior, and affected 
 ## Verification criteria
 
 - Build a risk-based test matrix covering the changed behavior, relevant boundary values, failure and recovery, and existing behavior that must remain stable. Prefer meaningful assertions over snapshots or test counts.
+- For changed landing and documentation surfaces, apply the rendered acceptance checks in [product-specific website direction](../oddmash-brand-design/references/product-website-direction.md). Record actual screenshots, verified content/links, first-use journey and any product identity or legibility defects. Check new paths against the organization naming convention without treating required names as defects.
 - For user-facing changes, verify real interaction under representative conditions: keyboard, focus, narrow layouts, long labels, relevant themes, reduced motion, and actual browser or device behavior. Choose browser coverage based on the affected platform.
 - For performance, use the same fixtures, environment, measurement definition, and repeated runs when comparing alternatives. Report variance and distinguish measured results from estimates.
 - Add focused regression coverage for confirmed defects when implementation is authorized. Keep fixtures synthetic, deterministic, and free of private data; avoid external side effects and offensive testing.
