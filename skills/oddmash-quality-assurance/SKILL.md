@@ -1,11 +1,21 @@
 ---
 name: oddmash-quality-assurance
-description: Design or assess Oddmash functional, usability, accessibility, performance, compatibility, or regression verification for a product change.
+description: Plan and execute Oddmash QA, smoke, regression, exploratory, functional, visual, accessibility, performance and compatibility tests; triage defects, verify fixes and recommend release readiness.
 ---
 
 # Oddmash quality assurance
 
 Read the requirements, repository test commands, current behavior, and affected contracts. Define the expected result before running checks.
+
+## QA workflow
+
+1. Read [execution playbook](references/execution.md) and [reporting and release gates](references/reporting.md). Establish exact candidate, authorized scope, applicable environments, acceptance criteria and risk-based case matrix.
+2. Run relevant existing tests and hands-on checks; verify behavior in the actual runtime when possible. Use synthetic fixtures and nonproduction environments. Record actual results instead of merely proposing a checklist.
+3. Triage findings by severity and user impact. In QA-only work, return evidence without modifying implementation; with explicit fix scope, add regression coverage and retest affected behavior.
+4. Report pass, fail, blocked, not applicable with reason, and not run separately. Keep exact-revision evidence, unverified required cases and unresolved risks visible. Recommend ready or not ready; do not grant merge or deployment authority.
+5. When specialist review or real-world verification is essential but unavailable, escalate rather than claiming coverage. Use [release management](../oddmash-release-management/SKILL.md) for the final candidate and authority boundaries.
+
+## Verification criteria
 
 - Build a risk-based test matrix covering the changed behavior, relevant boundary values, failure and recovery, and existing behavior that must remain stable. Prefer meaningful assertions over snapshots or test counts.
 - For user-facing changes, verify real interaction under representative conditions: keyboard, focus, narrow layouts, long labels, relevant themes, reduced motion, and actual browser or device behavior. Choose browser coverage based on the affected platform.
