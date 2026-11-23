@@ -19,3 +19,5 @@ Read the product brief and inspect the actual current workflow. Identify the use
 - Design confirmations proportional to consequences, undo where feasible, clear field errors, accessible announcements and predictable focus after navigation, dialog closure or deletion. Avoid destructive defaults, deceptive consent, forced sign-up and misleading urgency.
 - Check onboarding, first run, account settings, cancellation, sign-out and account deletion when applicable; ensure every user journey has an exit and recovery path.
 - Read [accessibility](../oddmash-accessibility/SKILL.md) and [security and privacy](../oddmash-security-privacy/SKILL.md) for acceptance criteria before handoff.
+
+- Where relevant, design authentication and recovery screens, email verification, session expiry, saved/draft/conflict indicators, unsaved-change confirmation, import/export, undo, upload progress and optimistic rollback; preserve the user's task across recoverable interruptions. Use [sharing](../oddmash-sharing-distribution/SKILL.md) and [internationalization](../oddmash-internationalization/SKILL.md) for affected surfaces.
