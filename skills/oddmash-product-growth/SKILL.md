@@ -14,3 +14,5 @@ Start with the product's intended audience, current adoption evidence, and what 
 - Review outcomes against the baseline, note limitations and confounders, and decide whether to keep, change, or stop the experiment. Convert evidence into a focused backlog with acceptance criteria.
 
 Use [product marketing](../oddmash-product-marketing/SKILL.md) for discovery content and [product planning](../oddmash-product-planning/SKILL.md) for material changes to product direction.
+
+- For metrics and experiments, follow [security and privacy](../oddmash-security-privacy/SKILL.md); define event fields, purpose, retention and opt-out before instrumentation. Do not collect unnecessary identifiers, raw inputs or sensitive session recordings. No deceptive consent, obstructed cancellation or manipulative experiments.
