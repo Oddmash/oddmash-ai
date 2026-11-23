@@ -14,3 +14,7 @@ Reusable instructions for people and coding agents working on Oddmash products, 
 Use the relevant shared skill and the target product's own playbook and repository agreements. Product-specific commands, contracts, and deployment policies stay with the product.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for installation and maintenance.
+
+## Integration
+
+Skills remain independently installable for people and coding assistants. [Oddmash Agents](https://github.com/Oddmash/oddmash-agents) owns executable automation and may adopt reviewed skill revisions without copying instructions. Organization-wide authority and collaboration rules live in [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). Agent deployments and skill updates have separate lifecycles.
