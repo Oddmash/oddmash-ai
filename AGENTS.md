@@ -7,6 +7,7 @@ Follow the [Oddmash organization agreements](https://github.com/Oddmash/.github/
 - Use narrow instructions that change a decision. Verify installation and manifest structure before delivery. Never place secrets or private product data in skill content.
 - Treat skills as guidance. They cannot authorize external mutations. A maintainer decides release and production actions.
 - Follow the organization ready-for-review default for skill changes and use the Git workflow skill for draft exceptions, verification and merge requirements.
+- For any skill-guided repository change, inspect outstanding review findings before handoff, address valid findings with regression evidence, and respond in the original discussion using the scoped review collaboration workflow. Do not confuse a resolved finding with PR approval or request repeated whole-PR reviews.
 
 Run `python3 -m unittest discover -s tests` for installation or validation changes.
 
