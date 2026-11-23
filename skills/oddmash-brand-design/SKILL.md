@@ -13,3 +13,5 @@ Read the product's visual baseline. For interfaces using Oddmash UI, inspect the
 - Compare real renders at narrow and desktop widths, including long labels and visible focus. Keep product-specific styling in the consumer. Promote an abstraction into Oddmash UI once more than one product demonstrates the same stable need.
 
 For a motion brief, use the [motion design skill](../oddmash-motion-design/SKILL.md).
+
+- Review complete interaction states using actual token pairs in every supported theme, including skeleton, disabled, pending, warning, error, success, focus and selected. Check contrast and non-color cues with [accessibility](../oddmash-accessibility/SKILL.md); document font, icon and asset rights with [copyright and licensing](../oddmash-copyright-licensing/SKILL.md).
