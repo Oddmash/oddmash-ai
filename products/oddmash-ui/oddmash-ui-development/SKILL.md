@@ -12,3 +12,5 @@ Read the repository agreements and relevant sections of CONTRIBUTING.md. Establi
 - For behavioral work, read [the component interaction checklist](references/interactions.md). For demo or documentation work, read [the demo and localization checklist](references/demo.md).
 - Use the project commands for token consistency, types, lint, tests, builds, bundle size, and demo build. For visual or interaction changes, run native browser checks in both themes, including keyboard focus and reduced motion. Record browser coverage and gaps.
 - For release work, follow the repository's OIDC instructions and version policy. Validate the packed archive in a fresh consumer, including public imports and CSS. Change release or production state only when authorized.
+
+- Apply the shared oddmash-accessibility and oddmash-ux-design criteria to component state contracts; verify skeleton, pending, disabled, empty, error and recovery examples as applicable. Keep data fetching, policy compliance and product-specific state orchestration with the consumer.
