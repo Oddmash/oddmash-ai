@@ -20,3 +20,19 @@ Use [UX design](../oddmash-ux-design/SKILL.md) for task flows and [product growt
 
 - For a solo-maintained product, identify minimum operating scope before implementation: user-facing states, WCAG 2.2 AA target for web interfaces, data processing map, third-party asset/API rights, applicable policies, abuse prevention, operations cost, support contact, recovery and retirement. Mark each applicable, not applicable with reason, or unresolved.
 - Define acceptance evidence and an explicit launch gate using [UX design](../oddmash-ux-design/SKILL.md), [accessibility](../oddmash-accessibility/SKILL.md), [security and privacy](../oddmash-security-privacy/SKILL.md), [copyright and licensing](../oddmash-copyright-licensing/SKILL.md), and [release management](../oddmash-release-management/SKILL.md). Do not silently accept unknown legal or privacy decisions.
+
+## Applicability routing
+
+For a new product or significant change, create a scoped checklist with columns area, applicability (required / optional / not applicable / unresolved), reason, owner and acceptance evidence. Required means needed for the stated scope, core safety, or established policy; optional means a deliberate product choice. Do not implement optional features without scope authorization.
+
+| Trigger | Consult |
+| --- | --- |
+| Any repository change | [Git workflow](../oddmash-git-workflow/SKILL.md) and quality assurance |
+| Public links, previews, export or embeds | [Sharing and distribution](../oddmash-sharing-distribution/SKILL.md) |
+| Public pages, docs or internal search | [Discoverability](../oddmash-discoverability/SKILL.md) |
+| Hosted service, external dependencies or persistent data | [Service operations](../oddmash-service-operations/SKILL.md) |
+| Multiple locales or region-sensitive content | [Internationalization](../oddmash-internationalization/SKILL.md) |
+| Billing, entitlements or usage quotas | [Monetization](../oddmash-monetization/SKILL.md) |
+| Any distributed artifact or deployable product | [Platform delivery](../oddmash-platform-delivery/SKILL.md) |
+
+For a small local library, billing/accounts may be out of scope; for a shared planning app, link visibility and revocation are required if private sharing is supported; for a browser extension, permission and store review are relevant. Explicitly mark unresolved choices, prioritize the smallest sustainable scope, and carry required items into QA and release gates.
