@@ -14,6 +14,8 @@ Oddmash UI and Vertactics already ship their own project skills. Their central v
 
 ## Checks
 
+Submit skill changes as ready-for-review PRs by default under the [shared Git workflow](skills/oddmash-git-workflow/SKILL.md); pending remote CI alone does not require a draft.
+
 ```sh
 python3 -m unittest discover -s tests
 python3 scripts/install.py --validate
