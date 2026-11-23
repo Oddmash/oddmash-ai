@@ -14,3 +14,5 @@ Read the current product brief, README, brand direction, and actual product. Sep
 - Produce a reviewable content plan with audience, channel, asset, CTA, and measurement. Distinguish draft content from published content. Obtain authorization before posting, sending outreach, paying, or changing live pages.
 
 Use [product growth](../oddmash-product-growth/SKILL.md) for measurement and experimentation after discovery.
+
+- Verify asset and claim rights, accessible media, privacy-preserving previews and actual product policy links; use [copyright and licensing](../oddmash-copyright-licensing/SKILL.md) and [security and privacy](../oddmash-security-privacy/SKILL.md). Avoid misleading urgency, unsupported compliance claims and undisclosed promotional relationships.
