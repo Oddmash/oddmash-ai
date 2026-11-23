@@ -9,6 +9,7 @@ Read the current architecture, repository agreements, runtime constraints, publi
 
 - Map affected boundaries, ownership, data flow, and failure behavior. Separate domain logic from rendering and transport where that creates a stable testable boundary. Keep product-specific decisions in the product repository.
 - Compare a small set of viable options against compatibility, maintenance, latency, complexity, cost, deployment constraints, and reversibility. Record why a dependency or abstraction earns its place rather than selecting it by popularity.
+- For shared library adoption, identify the supported adapter, runtime/SSR boundaries, bundle cost, fallback behavior, dependency versioning and downstream regression fixtures. Keep consumer-specific fixes separate from library fixes; use an independently reviewable upstream PR and supported release before upgrading the consumer.
 - Define contracts and invariants explicitly: types, errors, state transitions, data ownership, versions, and supported consumers. For migrations, identify old and new readers/writers, rollback conditions, and how existing data remains compatible.
 - For sensitive data, define which component may access it and minimize permissions, retention, and disclosure. Use safe defensive design review; do not execute untrusted code or develop attacks. Do not assume authorization to access production systems.
 - Document the selected design, rejected alternatives, unresolved risks, and a first independently verifiable implementation slice. Validate with the product's actual tests and runtime.
