@@ -14,3 +14,5 @@ Read the organization's community standards, repository contribution guide, temp
 - Record unresolved decisions and next actions without creating duplicate issues or excessive notifications. Escalate sensitive reports to the maintainers through the repository's documented process.
 
 Use [quality assurance](../oddmash-quality-assurance/SKILL.md) for verification criteria and [product growth](../oddmash-product-growth/SKILL.md) for aggregated feedback.
+
+- For reports of privacy, copyright, harassment or abuse, use the product's verified reporting channel, protect reporter identities and handle sensitive evidence privately. Avoid promising legal outcomes, moderation SLAs or account actions beyond maintainer authority.
