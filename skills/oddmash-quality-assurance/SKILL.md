@@ -14,3 +14,12 @@ Read the requirements, repository test commands, current behavior, and affected 
 - Record tested revision, commands, conditions, results, reproducible observations, and unverified cases. A passing local test is not evidence of remote CI or deployment success. Separate environment blockers from failed assertions.
 
 Use product-specific verification playbooks when applicable; they supplement rather than replace these criteria.
+
+## Product readiness evidence
+
+For the changed scope, record pass/fail/not applicable (with reason)/not verified, exact revision and evidence. Include:
+- State matrix: initial/refresh loading, skeleton layout stability, empty/filtered-empty, partial, timeout, offline, permission/session errors, retry, duplicate submissions, race/cancellation and success; verify retained data/input and focus.
+- UI matrix: narrow/wide, real long localized content, themes, text resize, keyboard/touch, dialogs, scrolling/overflows, reduced motion and manual accessibility against [WCAG criteria](../oddmash-accessibility/SKILL.md). Use deterministic network mocks for adverse conditions and real browser tests for rendering.
+- Data/policy matrix: permitted collection and refusal/withdrawal, redacted logs, authorization invariants, retention/deletion flows with synthetic data, accessible accurate policy links and documented asset rights. Refer to [privacy](../oddmash-security-privacy/SKILL.md) and [licensing](../oddmash-copyright-licensing/SKILL.md).
+- Delivery matrix: lint/types/tests/build, representative browser coverage, performance budgets and actual measurements (LCP, INP, CLS where meaningful), compatibility, error monitoring and recovery. Never fabricate device or production results.
+- Classify blockers by user harm, data exposure, legal uncertainty, core flow failure, accessibility barriers and regressions. Keep unresolved material blockers visible to the maintainer; do not treat incomplete checks as passed.
