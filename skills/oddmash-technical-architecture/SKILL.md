@@ -14,3 +14,6 @@ Read the current architecture, repository agreements, runtime constraints, publi
 - Document the selected design, rejected alternatives, unresolved risks, and a first independently verifiable implementation slice. Validate with the product's actual tests and runtime.
 
 Use [quality assurance](../oddmash-quality-assurance/SKILL.md) for verification design and [web delivery](../oddmash-web-delivery/SKILL.md) for frontend implementation.
+
+- For async operations define initial/refresh states, cancellation and latest-request handling, idempotency for consequential writes, bounded retries, timeouts, offline behavior, cache invalidation, partial results and safe recovery. Tie UI states to actual contracts.
+- Plan operational ownership for one maintainer: minimum service footprint, dependency updates, cost limits, quota handling, observability without personal data, backup/restore, migration checks, incident and rollback paths. Consult [privacy](../oddmash-security-privacy/SKILL.md) for data lifecycle and [release management](../oddmash-release-management/SKILL.md) for launch gates.
