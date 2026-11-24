@@ -8,7 +8,7 @@ Choose the dominant visitor task, not a fixed landing template. Combine paths wh
 
 | Product type | First useful action | Design and content direction |
 | --- | --- | --- |
-| Library or SDK | Install and complete a real integration | Readable editorial or technical typography, restrained palette, searchable native docs, runnable quickstart, API reference, recipes and limitations. Show input/output or a working example above the fold. |
+| Library or SDK | Install and complete a real integration | Readable editorial or technical typography, restrained palette, native docs with search when useful, runnable quickstart, API reference, recipes and limitations. Show input/output or a working example above the fold. |
 | Developer tool or extension | Inspect or solve a real problem | Real tool UI or a focused interactive workflow, reproducible example, install/setup, compatibility, privacy and troubleshooting. |
 | Consumer or SaaS product | Understand the value and start a useful task | Actual product screens, realistic scenarios, product-specific imagery and interaction, clear primary action, relevant pricing/support only when real. |
 | Game or entertainment | Understand the experience and play | Gameplay, core loop, controls, genuine atmosphere, distinctive art direction and motion tied to the game; play/download and platform requirements. |

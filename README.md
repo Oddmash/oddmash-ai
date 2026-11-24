@@ -44,6 +44,6 @@ Skills remain independently installable for people and coding assistants. [Oddma
 
 ## Solo-maintainer readiness
 
-Start with product planning and technical architecture, then use UX design to enumerate all applicable states. Apply WCAG 2.2 AA, privacy and copyright/terms reviews throughout implementation. Before release, use the quality assurance evidence matrix and release gate to identify verified, failed, inapplicable and unverified checks. Never treat a generated policy or automated accessibility scan as proof of compliance.
+For new products or material launches, start with product planning and technical architecture; use UX design when the scope includes a user-facing journey to enumerate applicable states. Apply WCAG 2.2 AA, privacy and copyright/terms reviews throughout implementation. Before release, use the quality assurance evidence matrix and release gate to identify verified, failed, inapplicable and unverified checks. Never treat a generated policy or automated accessibility scan as proof of compliance.
 
 Use the applicability routing table in [product planning](skills/oddmash-product-planning/SKILL.md) to choose required, optional and inapplicable specialist checks. Do not expand product scope merely to satisfy a checklist.
