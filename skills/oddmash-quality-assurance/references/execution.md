@@ -9,6 +9,7 @@
 ## Execute
 
 1. Run the existing required checks using repository commands. Record exit code, exact revision, environment and relevant output.
+   For JS/TS package-manager changes, verify the declared pnpm version, frozen install for every installation root, dependency-version and integrity parity, build-script policy, runtime matrix, and non-publishing packaging/release checks. Preserve external consumer installation coverage.
 2. Run focused unit and integration checks; verify boundary values, errors, asynchronous behavior and backward compatibility. Use isolated deterministic data and cleanup.
 3. Exercise primary workflows in a real browser or product runtime when applicable. Use representative supported devices, viewport sizes, browsers, roles and themes. Capture actual screenshots for visual defects; inspect focus, keyboard, screen reader where available, overflow, overlays and loading transitions.
 4. Exercise defined failure/recovery paths using safe local fixtures, mocked network and provider sandboxes. Verify no unexpected writes, duplicate actions, data loss or sensitive logging. Do not target external systems, construct exploits or run offensive validation.
