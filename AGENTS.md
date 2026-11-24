@@ -28,3 +28,8 @@ Use the role map in [README.md](README.md). Load the primary decision owner, the
 ## Agent contribution attribution
 
 Follow the [Oddmash agent attribution convention](https://github.com/Oddmash/.github/blob/main/AGENTS.md#agent-contribution-attribution). When a commit materially incorporates a verified finding or recommendation from Reviewer, Impact, Triage, QA, Release, Docs, or Architect, append the canonical `Co-authored-by` trailer for each actual contributing GitHub account. Deduplicate trailers, preserve human authorship and record the source role or discussion for shared identities. Do not credit unused advice or rewrite published history.
+
+## Delivery workflow
+
+- Use focused branches from the current `main` and target `main` directly for infrastructure changes. The organization product `develop` convention does not apply here. Preserve existing in-flight work and require current-head CI, review, normal merge commits and approved release or deployment policies.
+- Find or create a scoped issue before implementation and verify an explicit issue reference in every implementation PR body before opening and at handoff.
