@@ -14,7 +14,7 @@ Choose the dominant visitor task, not a fixed landing template. Combine paths wh
 | Game or entertainment | Understand the experience and play | Gameplay, core loop, controls, genuine atmosphere, distinctive art direction and motion tied to the game; play/download and platform requirements. |
 | Studio or portfolio | Understand the maker and inspect projects | Distinct editorial voice, recognizable work, real project artifacts and clear project links; avoid generic agency claims. |
 
-For example, Kowrap should foreground Korean text at the same measured width before/after and readable API documentation. Boundra needs to demonstrate its actual boundary-checking workflow with verified code and results. Vertactics should foreground its actual tactical map workflow and visual identity, not a generic developer-tool dashboard. Treat these as examples of reasoning, not layouts to reproduce.
+For example, Kowrap should foreground text at the same measured width before/after and readable API documentation. Boundra needs to demonstrate its actual boundary-checking workflow with verified code and results. A game-focused planning tool should foreground its actual map workflow and visual identity, not a generic developer-tool dashboard. Treat these as examples of reasoning, not layouts to reproduce.
 
 ## Design from identity
 
