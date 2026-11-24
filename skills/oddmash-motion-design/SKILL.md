@@ -18,3 +18,13 @@ Keep text and controls readable. State, measurement, and focus changes take effe
 Use the [implementation skill](../oddmash-motion-implementation/SKILL.md) to keep the chosen movement interruptible and verify both motion preferences.
 
 - Specify loading shimmer, progress, transition interruption and motion-free equivalents only when meaningful. Never delay data or error feedback for animation; avoid flicker, excessive motion and indefinite decorative loops. Use [accessibility](../oddmash-accessibility/SKILL.md) for applicable pause and flashing requirements.
+
+## Specialist patterns
+
+- [Content transitions](../oddmash-motion-content-transition/SKILL.md): auto-changing examples, rotating text and scene transitions.
+- [Entrance and reveal](../oddmash-motion-entrance-reveal/SKILL.md): staged hero, stagger and viewport entry.
+- [Layout transitions](../oddmash-motion-layout-transition/SKILL.md): measured reflow, before/after replay and resize.
+- [Control microinteractions](../oddmash-motion-microinteraction/SKILL.md): buttons, tabs, toggles and selection.
+- [Feedback motion](../oddmash-motion-feedback/SKILL.md): copy toast, status, loading and progress.
+
+Select the smallest relevant pattern; combine only when each movement communicates a real change. Document the trigger, timing, interruption, committed state and reduced-motion equivalent.
