@@ -43,3 +43,7 @@ Inspect actual rendered desktop and mobile screenshots and interact with the fir
 - Did the build, navigation, links, examples and relevant interactions actually pass? Record screenshots, commands, exact revision and unverified cases. Revise defects before reporting ready.
 
 Do not promise uniqueness from a checklist alone. Validate against actual content and rendered evidence; if the product cannot be run, label illustrative material and report the missing evidence.
+
+## Subtractive composition gate
+
+For each section, state its distinct job in the visitor journey. Remove redundant sections, repeated descriptions, implementation telemetry and decorative controls. Put installation and a real integration example near the first product proof for libraries unless a stronger visitor task justifies another order. Inspect the actual visual density, component allocation, responsive toolbar wrapping and internal overflow; keep deliberate scrolling for long content while ensuring controls do not acquire accidental scrollbars. Require an intentional visual review after functional CI rather than relying on it.
