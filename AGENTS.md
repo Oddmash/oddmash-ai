@@ -4,6 +4,7 @@ Follow the [Oddmash organization agreements](https://github.com/Oddmash/.github/
 
 - Use English for skill manifests, instructions, and commit messages. Keep names stable across changes and make activation boundaries explicit.
 - Apply the organization's plain-language convention in skill instructions and generated product copy. Avoid em dashes (U+2014), en dashes (U+2013) as sentence punctuation, decorative separators, and generic slogans; use direct sentences and preserve literal code or quotations.
+- Use lowercase kebab-case for new file and directory names across skills and generated projects, except tool/framework-required names, existing public contracts and conventional manifests such as `SKILL.md`, `AGENTS.md`, `README.md` and `package.json`. Follow the organization engineering baseline for identifier, style and compatibility rules. Do not rename existing paths without checking references and migration impact.
 - Keep cross-product skills under `skills/`. Use `products/<repo>/` for techniques that require a specific codebase. Link optional details from the entrypoint that uses them.
 - Use narrow instructions that change a decision. Verify installation and manifest structure before delivery. Never place secrets or private product data in skill content.
 - Treat skills as guidance. They cannot authorize external mutations. A maintainer decides release and production actions.
