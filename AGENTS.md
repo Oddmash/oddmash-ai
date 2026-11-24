@@ -33,3 +33,7 @@ Follow the [Oddmash agent attribution convention](https://github.com/Oddmash/.gi
 
 - Use focused branches from the current `main` and target `main` directly for infrastructure changes. The organization product `develop` convention does not apply here. Preserve existing in-flight work and require current-head CI, review, normal merge commits and approved release or deployment policies.
 - Find or create a scoped issue before implementation and verify an explicit issue reference in every implementation PR body before opening and at handoff.
+
+## Skill improvement feedback
+
+Route recurring verified non-security product-quality findings through the [skill improvement proposal workflow](docs/skill-improvement-proposals.md). Maintain one open proposal per owning skill and evidence category, distinguish product defects from shared guidance gaps, and retain independent reviewed consumer upgrades. Skills and agents do not publish or modify guidance without explicit maintainer authorization.
