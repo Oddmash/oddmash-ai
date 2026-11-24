@@ -1,0 +1,9 @@
+# Internal package management
+
+Read the internal package management section of the [organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md) and repository agreements. The organization policy owns the exact pnpm pin; do not duplicate a version in each skill.
+
+- Inventory independent package roots, existing lockfiles, workspace membership, scripts, CI jobs, deployment and release workflows, contributor docs, templates and open PRs before migration. Preserve in-flight work and use a focused PR.
+- Declare the shared exact version in each independent root's `package.json#packageManager`; retain the product's supported runtime versions for external consumers. Generate and commit the matching `pnpm-lock.yaml`. Import the existing lock where possible and compare every resolved package/version and integrity; do not introduce unrelated dependency upgrades or weaken supply-chain policy.
+- Use `pnpm install --frozen-lockfile` for independent installations in CI and deployment, with the correct workdir and lockfile cache key. Explicitly review dependency build-script permissions and workspace boundaries. Retain existing consumer compatibility fixtures where deliberately exercising another package manager.
+- Replace internal script invocations and contributor examples with pnpm. Retain user-facing npm, Yarn and Bun install guidance and the existing npm registry/OIDC release channel. Do not publish, deploy or update a protected branch merely to validate migration.
+- Run frozen install from a clean candidate, applicable lint/typecheck/tests/build, supported runtime and browser matrix, packed artifact checks and non-publishing release validation. Review exact-head CI and findings. A changed lockfile or workflow is not eligible for unattended merging simply because its checks pass.
