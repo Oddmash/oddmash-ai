@@ -48,6 +48,10 @@ class InstallTests(unittest.TestCase):
         self.assertEqual({path.name for path in self.target.iterdir()}, {file.parent.name for file in files})
         self.assertTrue((self.target / "oddmash-ui-development" / "references" / "demo.md").is_file())
 
+    def test_catalogue_contains_only_supported_product_playbooks(self):
+        self.assertEqual(set(self.products), {"kowrap", "oddmash-ui"})
+        self.assertEqual(set(path.name for path in (ROOT / "products").iterdir() if path.is_dir()), set(self.products))
+
     def test_existing_skill_blocks_all_new_links(self):
         conflict = self.target / self.shared[-1].parent.name
         conflict.mkdir(parents=True)

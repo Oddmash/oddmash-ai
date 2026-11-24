@@ -13,7 +13,7 @@ Reusable instructions for people and coding agents working on Oddmash products, 
 | Distribution and operation | [Sharing and distribution](skills/oddmash-sharing-distribution/SKILL.md), [Discoverability](skills/oddmash-discoverability/SKILL.md), [Service operations](skills/oddmash-service-operations/SKILL.md), [Internationalization](skills/oddmash-internationalization/SKILL.md), [Monetization](skills/oddmash-monetization/SKILL.md), [Platform delivery](skills/oddmash-platform-delivery/SKILL.md) |
 | Quality and delivery | [Git workflow](skills/oddmash-git-workflow/SKILL.md), [Code review collaboration](skills/oddmash-code-review-collaboration/SKILL.md), [Quality assurance](skills/oddmash-quality-assurance/SKILL.md), [Release management](skills/oddmash-release-management/SKILL.md) |
 | Discovery and growth | [Product marketing](skills/oddmash-product-marketing/SKILL.md), [Product growth](skills/oddmash-product-growth/SKILL.md), [Community management](skills/oddmash-community-management/SKILL.md) |
-| Product playbooks | [Kowrap](products/kowrap/kowrap-landing/SKILL.md), [Oddmash UI](products/oddmash-ui/oddmash-ui-development/SKILL.md), [Vertactics](products/vertactics/) |
+| Product playbooks | [Kowrap](products/kowrap/kowrap-landing/SKILL.md), [Oddmash UI](products/oddmash-ui/oddmash-ui-development/SKILL.md) |
 
 ## Decision ownership and routing
 

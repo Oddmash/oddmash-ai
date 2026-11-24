@@ -10,7 +10,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 LOCAL_LINK = re.compile(r"\]\(([^\s)]+)\)")
-PRODUCTS = ("kowrap", "oddmash-ui", "vertactics")
+PRODUCTS = ("kowrap", "oddmash-ui")
 
 
 def manifests(root):
