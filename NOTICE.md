@@ -2,4 +2,6 @@
 
 Copyright (c) 2026 Oddmash contributors.
 
-Original reusable skill text and installation tooling are licensed under the [MIT License](LICENSE). Oddmash names and brand identifiers are not granted for use as your own branding. Referenced third-party works retain their own terms.
+The [MIT License](LICENSE) applies to original source code and documentation in this repository. It does not grant trademark rights or an endorsement by Oddmash. Official Oddmash logos, character artwork and other standalone branding assets are separate from the licensed source and documentation unless expressly identified otherwise. Third-party marks and assets remain subject to their own applicable terms.
+
+This notice identifies the licensed material and separate rights. It does not impose additional conditions on material licensed under MIT.
