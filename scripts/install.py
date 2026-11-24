@@ -43,13 +43,14 @@ def validate(root):
                 raise ValueError(f"Expected one description of up to 1024 characters: {manifest}")
             if not any(line.strip() for line in lines[end + 1:]):
                 raise ValueError(f"Missing instructions: {manifest}")
-            for link in LOCAL_LINK.findall("\n".join(lines[end + 1:])):
-                url = urlsplit(link)
-                if url.scheme or url.netloc or not url.path:
-                    continue
-                destination = (manifest.parent / unquote(url.path)).resolve()
-                if not destination.is_relative_to(root.resolve()) or not destination.exists():
-                    raise ValueError(f"Invalid relative link {link} in {manifest}")
+            for document in sorted(manifest.parent.rglob("*.md")):
+                for link in LOCAL_LINK.findall(document.read_text(encoding="utf-8")):
+                    url = urlsplit(link)
+                    if url.scheme or url.netloc or not url.path:
+                        continue
+                    destination = (document.parent / unquote(url.path)).resolve()
+                    if not destination.is_relative_to(root.resolve()) or not destination.exists():
+                        raise ValueError(f"Invalid relative link {link} in {document}")
     return len(seen)
 
 

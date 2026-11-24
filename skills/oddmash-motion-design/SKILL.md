@@ -5,7 +5,7 @@ description: Design Oddmash motion for boundary changes, state confirmation, nav
 
 # Oddmash motion design
 
-Specify the trigger, what the user should notice, the committed state, and what remains usable. Tie a brand gesture to the outcome the user is inspecting. For a comparison, stage both states in the same location and call out the specific content that changed.
+Specify the trigger, what the user should notice, the committed state, and what remains usable. Tie a brand gesture to the outcome the user is inspecting. For causal transformation, show the actual state changing on one stable surface when that makes the effect clearer. Use simultaneous views when the user needs to inspect both outcomes. Select the presentation before animation; avoid prescribing panel count, controls, or a decorative cue.
 
 | Pattern | When it earns its place | Starting point |
 | --- | --- | --- |
@@ -27,4 +27,4 @@ Use the [implementation skill](../oddmash-motion-implementation/SKILL.md) to kee
 - [Control microinteractions](../oddmash-motion-microinteraction/SKILL.md): buttons, tabs, toggles and selection.
 - [Feedback motion](../oddmash-motion-feedback/SKILL.md): copy toast, status, loading and progress.
 
-Select the smallest relevant pattern; combine only when each movement communicates a real change. Document the trigger, timing, interruption, committed state and reduced-motion equivalent.
+Select the smallest relevant pattern; combine only when each movement communicates a real change. Movement is not a required feature. A meaningful automatic sequence may repeat when appropriate; use the smallest discoverable interruption mechanism required by accessibility, not a cluster of playback or example controls by default. Document the trigger, timing, interruption, committed state and reduced-motion equivalent.

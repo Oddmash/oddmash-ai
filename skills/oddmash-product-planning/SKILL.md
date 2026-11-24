@@ -10,9 +10,9 @@ Read the product brief, known constraints, and relevant repository agreements. U
 - For a new product or material direction change, compare existing alternatives against the target user's problem, workflow, limitations, and adoption cost. Cite primary evidence when external facts are needed. Identify why a separate product, integration, or contribution is justified.
 
 - State who arrives, what they need to do first, and what a successful result looks like. For a developer tool, show executable behavior. For a game, show a real play or planning decision. Keep claims tied to what exists.
-- Identify entry points and behavior people already rely on. Separate product decisions from reusable standards and record any choice that would affect compatibility, data, or production.
+- Identify entry points and behavior people already rely on. Distinguish mandatory product contracts, revisable preferences, and implementation details. If feedback repeats, revisit the original product or experience decision rather than accumulating local exceptions. Record changes that would affect compatibility, data, or production.
 - Define success measures and evidence before choosing a design: first useful action, task completion, quality or compatibility, and adoption where relevant. Record baseline, target, and unknowns; do not invent research or success metrics. Use the same content, conditions, and measures when comparing alternatives. Distinguish observable results, user research, and hypotheses.
-- Lead a landing page with the real product promise, then visible evidence. When a before/after comparison is the proof, show both outcomes on first view where feasible; an optional replay may explain the transition but should not be required to discover the benefit. Put advanced controls after the first useful action.
+- Lead a landing page with the real product promise, then visible evidence. When a before/after comparison is the proof, choose the presentation that makes the actual effect clearest: a single transforming surface for causal change, simultaneous results for detailed inspection, or a static demonstration when motion adds no value. Make the benefit understandable without waiting for animation. Put advanced controls after the first useful action.
 - Give each landing section one job. Remove repeated descriptions and links that do not serve a distinct next action.
 - Capture the chosen direction, open decisions, non-goals, and a reviewable first slice. For pages, include the proposed first action and the concrete evidence visible before secondary content.
 
@@ -29,7 +29,8 @@ For a new product or significant change, create a scoped checklist with columns 
 | --- | --- |
 | Any repository change | [Git workflow](../oddmash-git-workflow/SKILL.md) and quality assurance |
 | Public links, previews, export or embeds | [Sharing and distribution](../oddmash-sharing-distribution/SKILL.md) |
-| Public pages, docs or internal search | [Discoverability](../oddmash-discoverability/SKILL.md) |
+| Public pages, indexing or search discovery | [Discoverability](../oddmash-discoverability/SKILL.md) |
+| Developer quickstart, API reference, examples or migration docs | [Developer documentation](../oddmash-developer-documentation/SKILL.md) |
 | Hosted service, external dependencies or persistent data | [Service operations](../oddmash-service-operations/SKILL.md) |
 | Multiple locales or region-sensitive content | [Internationalization](../oddmash-internationalization/SKILL.md) |
 | Billing, entitlements or usage quotas | [Monetization](../oddmash-monetization/SKILL.md) |

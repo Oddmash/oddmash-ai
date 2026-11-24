@@ -8,7 +8,7 @@ Choose the dominant visitor task, not a fixed landing template. Combine paths wh
 
 | Product type | First useful action | Design and content direction |
 | --- | --- | --- |
-| Library or SDK | Install and complete a real integration | Readable editorial or technical typography, restrained palette, searchable native docs, runnable quickstart, API reference, recipes and limitations. Show input/output or a working example above the fold. |
+| Library or SDK | Install and complete a real integration | Readable editorial or technical typography, restrained palette, native docs with search when useful, runnable quickstart, API reference, recipes and limitations. Show input/output or a working example above the fold. |
 | Developer tool or extension | Inspect or solve a real problem | Real tool UI or a focused interactive workflow, reproducible example, install/setup, compatibility, privacy and troubleshooting. |
 | Consumer or SaaS product | Understand the value and start a useful task | Actual product screens, realistic scenarios, product-specific imagery and interaction, clear primary action, relevant pricing/support only when real. |
 | Game or entertainment | Understand the experience and play | Gameplay, core loop, controls, genuine atmosphere, distinctive art direction and motion tied to the game; play/download and platform requirements. |
@@ -18,7 +18,7 @@ For example, Kowrap should foreground Korean text at the same measured width bef
 
 ## Design from identity
 
-- Choose a composition around one irreplaceable product artifact. Compare at least two viable compositions for a substantial redesign (for example editorial demo vs split working surface); choose by visitor task, not trend. Define the typography roles, semantic colors, spacing rhythm, shape language, imagery and motion before polishing.
+- Choose a composition around one irreplaceable product artifact. Compare at least two genuinely different compositions for a substantial redesign (for example a single transforming artifact vs simultaneous comparison). Consider removing existing UI before adding to it; choose by visitor task, not trend or existing markup. Define the typography roles, semantic colors, spacing rhythm, shape language, imagery and motion before polishing.
 - Use actual screens, code, outputs, diagrams or gameplay rather than fabricated dashboards, stock filler, or decorative abstract 3D art. Use custom illustration only when it communicates something specific and has appropriate rights.
 - Do not default to oversized centered headline, pill eyebrow, gradient glow, glass panels, identical rounded feature cards, gratuitous badges, floating decorative blobs, excessive icons, fake metrics, logo strips or generic AI copy. Any such treatment must have a product-specific purpose. Avoid a uniform hero/features/CTA template across products.
 - Use purposeful asymmetry, whitespace, text scale, contrast, and content density. Use the shared soft geometry baseline for controls and surfaces unless the product has a documented reason to diverge; do not impose one palette, font, dark theme or layout on the entire organization. Reuse accessible behavior and semantic tokens without forcing visual sameness.
@@ -27,9 +27,9 @@ For example, Kowrap should foreground Korean text at the same measured width bef
 
 ## Native documentation and delivery
 
-For libraries and developer tools, make installation, quickstart, examples, API/configuration, compatibility, limitations and troubleshooting available on the product website when applicable. Use the actual released API and test examples. Add clear navigation, relevant search, readable code blocks with language and copy feedback, headings and anchors, mobile navigation and cross-links. A GitHub source link is supplementary, not the documentation path. For other products, provide the actual usage steps and support needed by the visitor, not an irrelevant API reference.
+For libraries and developer tools, use the [developer documentation](../../oddmash-developer-documentation/SKILL.md) skill for the complete human-facing documentation and usage journey. Keep the landing focused on the product proof and the path to those docs. For other products, provide usage steps and support when needed, not an irrelevant API reference.
 
-Derive the page sequence and CTA from the visitor task; omit sections without evidence or purpose. Reuse the existing suitable framework; select a static-first framework for content-heavy projects only when it fits existing constraints.
+Derive the page sequence and CTA from the visitor task; omit sections without evidence or purpose. Route framework selection to [web delivery](../../oddmash-web-delivery/SKILL.md).
 
 ## Acceptance before handoff
 
@@ -48,4 +48,4 @@ Do not promise uniqueness from a checklist alone. Validate against actual conten
 
 For each section, state its distinct job in the visitor journey. Remove redundant sections, repeated descriptions, implementation telemetry and decorative controls. Put installation and a real integration example near the first product proof for libraries unless a stronger visitor task justifies another order. Inspect the actual visual density, component allocation, responsive toolbar wrapping and internal overflow; keep deliberate scrolling for long content while ensuring controls do not acquire accidental scrollbars. Require an intentional visual review after functional CI rather than relying on it.
 
-For landing pages, use 16–24px for the primary product preview, 12–16px for supporting surfaces, and 8px for standard actions. Maintain readable spacing and straight content alignment; avoid nested rounded card grids. Review the mobile and desktop hierarchy before delivery.
+For landing pages, consider 16–24px for the primary product preview, 12–16px for supporting surfaces, and 8px for standard actions as starting points, not fixed requirements. Maintain readable spacing and straight content alignment; avoid nested rounded card grids. Review the mobile and desktop hierarchy before delivery.
