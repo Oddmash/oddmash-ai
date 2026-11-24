@@ -1,6 +1,6 @@
 ---
 name: oddmash-discoverability
-description: Plan and verify SEO, metadata, indexing, structured data, indexing and search discoverability for public Oddmash websites and documentation.
+description: Plan and verify SEO, metadata, indexing, structured data and search discoverability for public Oddmash websites and documentation.
 ---
 
 # Oddmash discoverability
