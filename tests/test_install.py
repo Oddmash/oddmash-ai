@@ -27,6 +27,21 @@ class InstallTests(unittest.TestCase):
             self.assertEqual((link / "SKILL.md").resolve(), manifest)
         self.assertFalse((self.target / "kowrap-landing").exists())
 
+    def test_developer_documentation_is_discoverable_as_shared_skill(self):
+        documentation = ROOT / "skills/oddmash-developer-documentation/SKILL.md"
+        self.assertIn(documentation, self.shared)
+        install([documentation], self.target)
+        self.assertEqual((self.target / "oddmash-developer-documentation/SKILL.md").resolve(), documentation)
+
+    def test_validator_checks_links_in_nested_references(self):
+        checkout = self.target / "checkout"
+        copytree(ROOT / "skills", checkout / "skills")
+        copytree(ROOT / "products", checkout / "products")
+        reference = checkout / "skills/oddmash-brand-design/references/product-website-direction.md"
+        reference.write_text(reference.read_text(encoding="utf-8") + "\n[Missing](missing.md)\n", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Invalid relative link"):
+            validate(checkout)
+
     def test_product_install_links_only_the_selected_product(self):
         files = self.products["oddmash-ui"]
         install(files, self.target)
