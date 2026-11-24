@@ -22,6 +22,11 @@ Use [web delivery](../oddmash-web-delivery/SKILL.md) for framework and delivery 
 
 - Review complete interaction states using actual token pairs in every supported theme, including skeleton, disabled, pending, warning, error, success, focus and selected. Check contrast and non-color cues with [accessibility](../oddmash-accessibility/SKILL.md); document font, icon and asset rights with [copyright and licensing](../oddmash-copyright-licensing/SKILL.md).
 
-## Shared soft geometry
+## Shared visual language
 
-Use a restrained Vercel/Geist-inspired starting point, adjusting values to the brand and real geometry: 6px for small controls, 8px for standard buttons and inputs, 12px for cards and code blocks, 16px for overlays and large surfaces, and 24px for prominent product previews. Reserve pill radii for chips, avatars and compact status indicators. Keep edges straight where alignment or measured content requires it. Use role-based tokens, subtle borders, quiet elevation and generous whitespace; do not round every nested surface. Preserve product colors, imagery and distinct composition. Use the supported themes and evaluate nested corner alignment, focus visibility and overflow in real renders rather than enforcing a numeric radius.
+Apply the product's existing semantic tokens first. Use these defaults for roles the product has yet to define.
+
+- **Geometry** varies by role. Start at 6 px for compact controls, 8 px for standard buttons and inputs, 12 px for cards and code blocks, 16 px for overlays and 24 px for a prominent product preview. Use pills for elements with a meaningful capsule shape, such as compact chips. When one outlined surface sits inside another, account for the inset so their corners align.
+- **Spacing** makes related elements read as a group. Keep icon and label gaps compact, give controls and containers enough inset for their content, and make the gap between groups visibly larger than the gaps inside them. Use the product spacing scale and check the rhythm with wrapped labels on narrow screens.
+- **Surfaces** express hierarchy through the page background, quiet borders and elevation where overlap conveys a distinct layer, such as a menu or dialog. Keep related content on a shared surface when individual card borders add visual noise. Check surface boundaries and focus rings in each supported theme.
+- **Product exceptions** follow the task. Keep precise grids, code demonstrations and dense toolbars aligned to their underlying geometry. A product can choose squarer or rounder shapes, tighter spacing or stronger surface separation when its identity or workflow needs them. Record that reason in the product guidance and compare real renders at narrow and desktop widths.
