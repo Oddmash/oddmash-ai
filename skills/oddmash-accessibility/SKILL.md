@@ -10,8 +10,13 @@ Verify the actual interface, not just markup. Prefer semantic HTML to custom ARI
 - Check keyboard operation, accessible names, logical focus, visible focus, escape and focus restoration. Distinguish action buttons with changing labels from toggles with stable names and aria-pressed.
 - Check contrast, applicable target size, reflow and zoom. Use 4.5:1 for normal text and 3:1 for large text; do not rely on color alone.
 - Present meaningful asynchronous feedback visibly and through a pre-existing, separate live region. Preserve focus.
-- Honor reduced motion. Automatically started movement lasting over five seconds alongside other content needs a pause, stop or hide mechanism unless essential. Repetition itself is not prohibited.
+- Honor reduced motion through existing platform preferences where practical; do not introduce a separate preferences UI by default. Automatically started movement lasting over five seconds alongside other content needs a pause, stop or hide mechanism unless essential. Automatically updating content has no five-second exception. Repetition itself is not prohibited.
 - Test keyboard, browser/device behavior and relevant assistive technologies where available. Automated tests supplement manual checks. Cite actual criteria and evidence; do not claim conformance from a scan alone.
+
+## Proportionate support
+
+- Prioritize applicable accessible keyboard interaction, focus, contrast, reflow, semantic names, and recovery in the primary user journey. Use native browser and operating-system capabilities instead of adding parallel custom settings. Do not trade away applicable accessibility requirements to simplify implementation.
+- Treat extra preferences, custom high-contrast themes, legacy browser support and uncommon device-specific enhancements as product scope decisions, not default features. Document meaningful exclusions and test the supported modern browser matrix.
 
 Reference: https://www.w3.org/TR/WCAG22/
 
