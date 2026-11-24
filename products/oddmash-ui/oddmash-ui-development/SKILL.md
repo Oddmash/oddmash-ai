@@ -9,7 +9,7 @@ Read the repository agreements and relevant sections of CONTRIBUTING.md. Establi
 
 - Edit primitive values and semantic aliases under `tokens/`. Keep light and dark semantic keys aligned. Regenerate output and check the diff. Keep consumer-specific layout and colors outside the package.
 - Preserve ESM-only output, React 18 and 19 peers, component subpath exports, and the absence of a global reset. Preserve native props, refs, class names, and styles. Update entrypoints, declarations, tests, examples, and docs together when a public contract changes.
-- For behavioral work, read [the component interaction checklist](references/interactions.md). For demo or documentation work, read [the demo and localization checklist](references/demo.md).
+- For behavioral work, read [the component interaction checklist](references/interactions.md). For demo or documentation work, read [the demo and localization checklist](references/demo.md) and [developer documentation](../../../skills/oddmash-developer-documentation/SKILL.md). Keep component props and examples derived from public contracts; do not prescribe consumer page composition.
 - Use the project commands for token consistency, types, lint, tests, builds, bundle size, and demo build. For visual or interaction changes, run native browser checks in both themes, including keyboard focus and reduced motion. Record browser coverage and gaps.
 - For release work, follow the repository's OIDC instructions and version policy. Validate the packed archive in a fresh consumer, including public imports and CSS. Change release or production state only when authorized.
 
