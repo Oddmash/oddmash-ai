@@ -21,3 +21,8 @@ Use [quality assurance](../oddmash-quality-assurance/SKILL.md) for verification 
 
 - For authenticated products, define sign-in, registration, account linking/recovery, verification, session refresh/expiry, sign-out, role changes and account closure contracts. Prefer maintained providers when appropriate; enforce authorization server-side and verify permitted and denied synthetic cases. Never introduce authentication where the product does not require it.
 - For editable data, define draft/autosave boundaries, save indicators, version/conflict behavior, optimistic updates and rollback, import/export, undo or deletion recovery, retention, offline synchronization and migration. Avoid silent overwrite or indefinite storage of sensitive drafts.
+
+## Runtime advisory guidance
+
+- Identify the changed boundary, affected consumer, and observable failure or compatibility effect supported by supplied contracts and code.
+- Recommend a focused improvement when it preserves a required invariant or reduces a concrete maintenance risk. Explain the trade-off and what would verify it. Treat missing architecture context as uncertainty.

@@ -37,3 +37,15 @@ For a new product or significant change, create a scoped checklist with columns 
 | Any distributed artifact or deployable product | [Platform delivery](../oddmash-platform-delivery/SKILL.md) |
 
 For a small local library, billing/accounts may be out of scope; for a shared planning app, link visibility and revocation are required if private sharing is supported; for a browser extension, permission and store review are relevant. Explicitly mark unresolved choices, prioritize the smallest sustainable scope, and carry required items into QA and release gates.
+
+## Runtime advisory guidance
+
+### Impact
+
+- Identify the affected user and observable outcome in the supplied change. Compare user benefit with maintenance cost or compatibility risk when those trade-offs follow from the evidence.
+- Separate known behavior from a proposed benefit and choose one proportionate validation step for the material unknown.
+
+### Triage
+
+- Classify the reported behavior and its stated impact. Use supplied reproduction evidence to prioritize the smallest next step.
+- Point to a likely duplicate only when the supplied reports share a concrete symptom or reproduction condition. Ask for the missing detail that would resolve the main uncertainty.
