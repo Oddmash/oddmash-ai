@@ -26,3 +26,8 @@ Before reporting a change as release-ready, use [quality assurance](../oddmash-q
 - No known unresolved critical blockers or skipped required checks. Explicitly distinguish approved residual risks from unknowns; a skill cannot waive CI, legal review, permissions or launch authorization.
 
 - Reconcile the applicability checklist from [product planning](../oddmash-product-planning/SKILL.md) with evidence from the selected specialist skills. Required unknown or failed checks block readiness; optional exclusions and not-applicable reasons remain documented. Verify platform artifacts, operational ownership, share visibility, localized metadata and billing sandbox evidence where applicable. Follow [Git workflow](../oddmash-git-workflow/SKILL.md) for exact-head review and merge policy.
+
+## Runtime advisory guidance
+
+- Draft release notes from evidenced user-visible changes. Suggest version impact, compatibility and migration notes when the supplied repository policy and contracts support them.
+- Distinguish observed candidate checks from remaining verification. State uncertainty when release metadata is partial and report operational follow-up as a recommendation for the maintainer.

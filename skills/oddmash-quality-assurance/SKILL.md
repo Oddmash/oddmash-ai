@@ -40,3 +40,8 @@ For the changed scope, record pass/fail/not applicable (with reason)/not verifie
 - Extend the matrix from the product's applicability checklist. Verify share revocation, embed fallback, page discovery/privacy, locale switching and regional formatting, saved-draft recovery, authentication/session transitions, billing sandbox state changes, and artifact/operational recovery where required. Use the relevant specialist skill for detailed criteria; do not demand irrelevant coverage.
 
 - Require separate functional and rendered design results for visual changes. Test observable outcomes rather than incidental UI shape or implementation classes. If an authorized redesign removes an unnecessary control or changes presentation, revise outdated assertions and replace them with equivalent outcome, accessibility and contract coverage; do not weaken required behavior. Use the visual review owner to identify and retest concrete defects. Green CI and generated screenshots alone do not establish visual acceptance.
+
+## Runtime advisory guidance
+
+- Identify regression risks tied to the changed behavior, including relevant boundaries, failure recovery, or behavior that must remain stable. Recommend the smallest check that would confirm the expected result.
+- Report supplied checks as observed evidence and proposed checks as follow-up. State what the available evidence leaves unverified. Limit the assessment to the affected scope.

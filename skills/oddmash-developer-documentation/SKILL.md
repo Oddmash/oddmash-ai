@@ -20,3 +20,8 @@ Read the released or approved public API, package exports, supported versions, r
 
 - Keep one authoritative documentation source; derive rendered pages and agent-readable artifacts from it. Delegate metadata, indexing, public llms.txt and Markdown artifact details to [discoverability](../oddmash-discoverability/SKILL.md), not a second documentation source. Keep private content out of public outputs.
 - Verify actual install/import/example execution in a clean supported consumer where feasible; compare documented signatures and defaults against exports and supported versions. Check the first useful flow, required/conditional semantics, code copy, navigation and anchors in representative desktop and narrow renders. Record gaps and pass results to [quality assurance](../oddmash-quality-assurance/SKILL.md) and [release management](../oddmash-release-management/SKILL.md).
+
+## Runtime advisory guidance
+
+- Compare affected examples, reference entries and migration steps against the supplied public contract, supported versions, and changed behavior. Point out concrete mismatches that could block a reader's next step.
+- State which example or reference needs verification when the supplied material does not establish its correctness. Keep presentation suggestions focused on discoverability or readability problems evidenced by the change.
