@@ -19,6 +19,10 @@ Use the [implementation skill](../oddmash-motion-implementation/SKILL.md) to kee
 
 - Specify loading shimmer, progress, transition interruption and motion-free equivalents only when meaningful. Never delay data or error feedback for animation; avoid flicker, excessive motion and indefinite decorative loops. Use [accessibility](../oddmash-accessibility/SKILL.md) for applicable pause and flashing requirements.
 
+## Cinematic hero sequencing
+
+For an explicitly immersive or cinematic product hero, use a single coherent stage and a sequence of meaningful states: establish the real input, visibly trace the product action and show its consequence. Use restrained lighting, depth, path motion or focus choreography only where it guides attention to the actual output. Prefer the product's own geometry and mark rather than generic particle effects. Keep the headline and CTA available on first paint, reserve geometry for all localized scenes, and keep normal scrolling. Use several genuinely distinct examples when needed; hold the readable result longer than the transition. Avoid a cluster of controls, but provide one discoverable pause/resume and a way to inspect another state when required. Automatically pause offscreen, while focused or hovered over the scene, and on hidden tabs; honor reduced motion with an immediate static equivalent and no auto-advance. Test real intermediate frames, the settled states and interrupted motion on narrow and desktop widths. Route sequencing to [content transitions](../oddmash-motion-content-transition/SKILL.md) and geometry to implementation.
+
 ## Specialist patterns
 
 - [Content transitions](../oddmash-motion-content-transition/SKILL.md): auto-changing examples, rotating text and scene transitions.
