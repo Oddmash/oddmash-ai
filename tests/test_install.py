@@ -1,5 +1,7 @@
 from pathlib import Path
 from shutil import copytree
+import subprocess
+import sys
 from tempfile import TemporaryDirectory
 import unittest
 
@@ -51,6 +53,39 @@ class InstallTests(unittest.TestCase):
     def test_catalogue_contains_only_supported_product_playbooks(self):
         self.assertEqual(set(self.products), {"kowrap", "oddmash-ui"})
         self.assertEqual(set(path.name for path in (ROOT / "products").iterdir() if path.is_dir()), set(self.products))
+
+    def test_juliya_and_legacy_selectors_install_the_same_playbook(self):
+        expected = ROOT / "products/kowrap/kowrap-landing/SKILL.md"
+        for selector in ("juliya", "kowrap"):
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts/install.py"), "--product", selector, "--target", str(self.target)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual({path.name for path in self.target.iterdir()}, {"kowrap-landing"})
+            self.assertEqual((self.target / "kowrap-landing/SKILL.md").resolve(), expected)
+            self.assertIn("Linked 1 skills" if selector == "juliya" else "Linked 0 skills", result.stdout)
+
+    def test_juliya_check_reports_one_playbook_without_writing(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/install.py"), "--product", "juliya", "--target", str(self.target), "--check"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("0 linked, 1 ready to link", result.stdout)
+        self.assertFalse(self.target.exists())
+
+    def test_invalid_product_selector_leaves_target_untouched(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/install.py"), "--product", "invalid", "--target", str(self.target)],
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("invalid choice", result.stderr)
+        self.assertFalse(self.target.exists())
 
     def test_existing_skill_blocks_all_new_links(self):
         conflict = self.target / self.shared[-1].parent.name
