@@ -25,6 +25,10 @@ Use the current [Oddmash Website](https://oddmash.github.io/oddmash-website/) an
 - Transfer the restraint, visual rhythm, evidence-led hierarchy, clear interaction and intentional motion, not the exact colors, component arrangements, artwork, or page structure. A game, product or library keeps its own visual identity.
 - For a material redesign, compare the candidate against these references on content density, whitespace, hierarchy and first-action discoverability. Do not claim visual parity without inspecting actual renders.
 
+## Cinematic product heroes
+
+When the real product has multiple meaningful states or the maintainer requests an immersive hero, prefer a spacious integrated stage over a small dashboard card. Keep the headline, first action and reading position stable, and use a single focal artifact to tell a story with cause, action and consequence. Juliya reveals actual reflow across measured widths; Oddmash uses a distinctive mark and staged workflow. Translate that principle into the product's own material, for example an architecture path, diagnostic and corrected path in Boundra. Compare an integrated scene against a static proof, and use the [motion design guidance](../../oddmash-motion-design/SKILL.md) to choose automatic sequencing and interruption. Do not make cinematic mean a decorative movie, constant camera movement or autoplay that obscures content.
+
 ## Design from identity
 
 For a new or material redesign, use a short direction record with two compositions, real visual reference or product artifact provenance, and the reason the chosen layout serves the first useful action. Do not make collection of references a blocker for a small requested edit. Establish an explicit above-the-fold reading order at desktop and narrow widths; avoid burying a first usable example below generic copy. Choose one primary action per decision point; retain secondary destinations only when they serve distinct outcomes.
@@ -34,7 +38,7 @@ For a new or material redesign, use a short direction record with two compositio
 - Do not default to oversized centered headline, pill eyebrow, gradient glow, glass panels, identical rounded feature cards, gratuitous badges, floating decorative blobs, excessive icons, fake metrics, logo strips or generic AI copy. Any such treatment must have a product-specific purpose. Avoid a uniform hero/features/CTA template across products.
 - Use purposeful asymmetry, whitespace, text scale, contrast, and content density. Use the shared soft geometry baseline for controls and surfaces unless the product has a documented reason to diverge; do not impose one palette, font, dark theme or layout on the entire organization. Reuse accessible behavior and semantic tokens without forcing visual sameness.
 - Use direct human copy. State what happens, how to use it and what the visitor gains. Remove repeated slogans, padded feature lists, em/en dashes as sentence punctuation, invented evidence and unnecessary labels.
-- Animate actual product behavior when useful. Prefer stable demonstrations with natural transitions and distinct examples; avoid endless decorative loops, forced auto-play, controls duplicated elsewhere, or motion that obscures reading. Provide accessible control when automatically moving content requires it, and a reliable static reduced-motion state.
+- Animate actual product behavior when useful. Prefer stable demonstrations with natural transitions and distinct examples; avoid endless decorative loops, unmotivated auto-play, controls duplicated elsewhere, or motion that obscures reading. Provide accessible control when automatically moving content requires it, and a reliable static reduced-motion state.
 
 ## Native documentation and delivery
 
