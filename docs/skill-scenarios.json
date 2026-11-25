@@ -116,5 +116,45 @@
     "avoid": [
       "Blind package rename or hardcoded breaks."
     ]
+  },
+  {
+    "id": "product-logo",
+    "prompt": "Create a logo for a new architecture library with a distinct product identity, taking inspiration from Boundra and Juliya.",
+    "primary": [
+      "oddmash-logo-design"
+    ],
+    "support": [
+      "oddmash-brand-design",
+      "oddmash-copyright-licensing",
+      "oddmash-visual-clarity"
+    ],
+    "expected": [
+      "Compare distinct silhouettes grounded in product behavior.",
+      "Validate editable vector and monochrome, favicon scale and light/dark placement."
+    ],
+    "avoid": [
+      "Copying an existing mark or using generic symbols and illegible detail."
+    ]
+  },
+  {
+    "id": "cinematic-hero",
+    "prompt": "A static two-state developer tool landing feels weak. Create an immersive automatic hero showing multiple real outcomes like Juliya and Oddmash.",
+    "primary": [
+      "oddmash-brand-design",
+      "oddmash-motion-design"
+    ],
+    "support": [
+      "oddmash-motion-content-transition",
+      "oddmash-motion-implementation",
+      "oddmash-accessibility",
+      "oddmash-visual-clarity"
+    ],
+    "expected": [
+      "Choose meaningful scenes with real inputs and consequences, stable CTA and readable dwell.",
+      "Provide pause, reduced-motion static alternative and offscreen suspension; verify actual states."
+    ],
+    "avoid": [
+      "Generic looping particles, scroll hijacking or fabricated product results."
+    ]
   }
 ]

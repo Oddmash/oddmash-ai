@@ -16,6 +16,8 @@ For new or substantially revised landing pages, read [product-specific website d
 - For eligible Korean, English, Japanese or Simplified Chinese prose where the verified release supports the locale, apply [Juliya typography and adoption](../oddmash-internationalization/references/korean-typography.md); judge semantic line breaks with actual type and measured layout, not hardcoded line breaks or a visual guess.
 - Compare real renders at narrow and desktop widths, including long labels and visible focus. Keep product-specific styling in the consumer. Promote an abstraction into Oddmash UI once more than one product demonstrates the same stable need.
 
+For a new or revised mark, favicon or app icon, use [logo design](../oddmash-logo-design/SKILL.md) for concept selection, vector construction and small-size validation.
+
 For a motion brief, use the [motion design skill](../oddmash-motion-design/SKILL.md).
 
 Use [web delivery](../oddmash-web-delivery/SKILL.md) for framework and delivery choices, [developer documentation](../oddmash-developer-documentation/SKILL.md) for public API content, and [visual clarity](../oddmash-visual-clarity/SKILL.md) for independent rendered assessment.
