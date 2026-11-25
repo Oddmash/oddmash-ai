@@ -24,6 +24,26 @@
     ]
   },
   {
+    "id": "shared-ui-adoption",
+    "prompt": "A documentation demo uses local Select and Slider controls even though the current released Oddmash UI has compatible controls. Its comparison panel also intentionally demonstrates native browser input. Improve consistency without changing the demonstration or product brand.",
+    "primary": [
+      "oddmash-web-delivery"
+    ],
+    "support": [
+      "oddmash-quality-assurance",
+      "oddmash-accessibility",
+      "oddmash-brand-design"
+    ],
+    "expected": [
+      "Inspect the consumer's released public exports, use the compatible shared controls for the surrounding UI, and retain the intentional native comparison.",
+      "Record exceptions and check actual implementation, focus, keyboard, responsive rendering and fallback behavior."
+    ],
+    "avoid": [
+      "Local duplicate controls that merely resemble the shared design, an invented native-component exception or a forced unreleased dependency.",
+      "A uniform product theme or a change to the native behavior under demonstration."
+    ]
+  },
+  {
     "id": "peer-resource-card-navigation",
     "prompt": "Two resource cards have different description lengths and mismatched link alignment. Some GitHub icons have tiny hit areas and one resource has no published registry package. Improve navigation without removing local documentation or making separate links conflict with the card destination.",
     "primary": [
