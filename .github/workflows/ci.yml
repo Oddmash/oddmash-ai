@@ -40,6 +40,8 @@ jobs:
           persist-credentials: false
       - name: Validate skill manifests and relative links
         run: python3 scripts/install.py --validate
+      - name: Validate routing scenario fixtures
+        run: python3 -m unittest discover -s tests -p 'test_skill_scenarios.py'
       - name: Run installation tests when repository structure or tooling changes
         env:
           BEFORE: ${{ github.event.before }}
