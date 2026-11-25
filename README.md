@@ -5,7 +5,7 @@ Reusable instructions for people and coding agents working on Oddmash products, 
 | Area | Skills |
 | --- | --- |
 | Product definition | [Product planning](skills/oddmash-product-planning/SKILL.md) |
-| Experience and visual direction | [UX design](skills/oddmash-ux-design/SKILL.md), [Brand design](skills/oddmash-brand-design/SKILL.md), [Motion design](skills/oddmash-motion-design/SKILL.md) |
+| Experience and visual direction | [UX design](skills/oddmash-ux-design/SKILL.md), [Brand design](skills/oddmash-brand-design/SKILL.md), [Logo design](skills/oddmash-logo-design/SKILL.md), [Motion design](skills/oddmash-motion-design/SKILL.md) |
 | Developer documentation | [Developer documentation](skills/oddmash-developer-documentation/SKILL.md) |
 | Motion patterns | [Content transitions](skills/oddmash-motion-content-transition/SKILL.md), [Entrance and reveal](skills/oddmash-motion-entrance-reveal/SKILL.md), [Layout transitions](skills/oddmash-motion-layout-transition/SKILL.md), [Control microinteractions](skills/oddmash-motion-microinteraction/SKILL.md), [Feedback motion](skills/oddmash-motion-feedback/SKILL.md) |
 | Engineering | [Technical architecture](skills/oddmash-technical-architecture/SKILL.md), [Web delivery](skills/oddmash-web-delivery/SKILL.md), [Motion implementation](skills/oddmash-motion-implementation/SKILL.md) |
@@ -24,6 +24,7 @@ Use one primary owner for each question. Select only applicable specialists rath
 | Who is this for, and what must the product prove? | Product planning | Product marketing for messaging; growth for post-launch evidence |
 | What journey and controls does the user need? | UX design | Accessibility for applicable constraints |
 | What should it look like? | Brand design | Product identity and shared design tokens |
+| How should a product mark be created or refined? | Logo design | Brand design for the wider identity; licensing for provenance |
 | What should move, and why? | Motion design | Select only the relevant motion pattern; implementation handles timing and geometry |
 | How should users learn and use a public API? | Developer documentation | Technical architecture for contracts; discoverability for indexing and agent-readable outputs |
 | How should the change be implemented? | Web delivery or technical architecture | Product playbook, local repository rules |
