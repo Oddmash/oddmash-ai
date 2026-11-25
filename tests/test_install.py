@@ -67,6 +67,26 @@ class InstallTests(unittest.TestCase):
             self.assertEqual((self.target / "kowrap-landing/SKILL.md").resolve(), expected)
             self.assertIn("Linked 1 skills" if selector == "juliya" else "Linked 0 skills", result.stdout)
 
+    def test_juliya_check_reports_one_playbook_without_writing(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/install.py"), "--product", "juliya", "--target", str(self.target), "--check"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("0 linked, 1 ready to link", result.stdout)
+        self.assertFalse(self.target.exists())
+
+    def test_invalid_product_selector_leaves_target_untouched(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/install.py"), "--product", "invalid", "--target", str(self.target)],
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("invalid choice", result.stderr)
+        self.assertFalse(self.target.exists())
+
     def test_existing_skill_blocks_all_new_links(self):
         conflict = self.target / self.shared[-1].parent.name
         conflict.mkdir(parents=True)
