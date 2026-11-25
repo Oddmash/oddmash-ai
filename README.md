@@ -13,7 +13,7 @@ Reusable instructions for people and coding agents working on Oddmash products, 
 | Distribution and operation | [Sharing and distribution](skills/oddmash-sharing-distribution/SKILL.md), [Discoverability](skills/oddmash-discoverability/SKILL.md), [Service operations](skills/oddmash-service-operations/SKILL.md), [Internationalization](skills/oddmash-internationalization/SKILL.md), [Monetization](skills/oddmash-monetization/SKILL.md), [Platform delivery](skills/oddmash-platform-delivery/SKILL.md) |
 | Quality and delivery | [Git workflow](skills/oddmash-git-workflow/SKILL.md), [Code review collaboration](skills/oddmash-code-review-collaboration/SKILL.md), [Quality assurance](skills/oddmash-quality-assurance/SKILL.md), [Release management](skills/oddmash-release-management/SKILL.md) |
 | Discovery and growth | [Product marketing](skills/oddmash-product-marketing/SKILL.md), [Product growth](skills/oddmash-product-growth/SKILL.md), [Community management](skills/oddmash-community-management/SKILL.md) |
-| Product playbooks | [Kowrap](products/kowrap/kowrap-landing/SKILL.md), [Oddmash UI](products/oddmash-ui/oddmash-ui-development/SKILL.md) |
+| Product playbooks | [Juliya (formerly Kowrap)](products/kowrap/kowrap-landing/SKILL.md), [Oddmash UI](products/oddmash-ui/oddmash-ui-development/SKILL.md) |
 
 ## Decision ownership and routing
 
@@ -32,9 +32,11 @@ Use one primary owner for each question. Select only applicable specialists rath
 
 A current authorized requirement takes precedence over a revisable design preference, within applicable authority, public contracts and accessibility requirements. Shared geometry, motion timings and composition patterns are defaults, not acceptance conditions. Existing UI is a hypothesis to inspect. When a user repeatedly identifies the same kind of defect, re-evaluate the owning decision and the whole affected journey.
 
-For a library landing redesign, start with product planning, UX and brand. Add motion design only if the proof benefits from motion, developer documentation for actual usage, and visual clarity plus QA before handoff. For a small API docs correction, start with developer documentation and the local contract; do not load every landing skill. For an operational or backend change, use the appropriate engineering or operations owner, not the design bundle.
+For a new or substantially redesigned landing, start with product planning, UX and brand, then read the product-specific website direction and use its acceptance gate. For a small localized change, load the relevant owner only. Add motion design only if the proof benefits from motion, developer documentation for actual usage, and visual clarity plus QA before handoff. For a small API docs correction, start with developer documentation and the local contract; do not load every landing skill. For an operational or backend change, use the appropriate engineering or operations owner, not the design bundle.
 
 Product-specific commands, contracts, and deployment policies stay with the product.
+
+Use [routing evaluation scenarios](docs/skill-evaluation.md) to test skill selection and output quality without treating structural validation as model evaluation.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for installation and maintenance.
 
