@@ -7,7 +7,7 @@ description: Evaluate and improve visual hierarchy, legibility, readability and 
 
 Inspect the rendered interface at representative desktop and narrow widths. Identify the primary task and what must be noticed first. Assess the result independently of the implementation and functional CI. A correct feature may still have an unclear, cluttered, or visually inappropriate design.
 
-- Establish hierarchy through spacing, size, weight and contrast. Avoid competing accents, excessive bold text, decorative cards and repeated headings. Use product tokens and real Korean and English content.
+- Establish hierarchy through spacing, size, weight and contrast. Avoid competing accents, excessive bold text, decorative cards and repeated headings. Use product tokens and real content in the supported locales.
 - Preserve legibility under wrapping, zoom and localization. Check density, alignment and clipping. Keep essential information available without hover or motion.
 - Distinguish actions, selection, error and success visibly without relying on color alone.
 - Use intentional motion to demonstrate real changes; keep content legible and provide pause, reduced-motion and offscreen behavior.
@@ -16,6 +16,8 @@ Inspect the rendered interface at representative desktop and narrow widths. Iden
 - Audit final geometry across skeleton, loading and loaded states, consistent control heights/padding/icon alignment, focus rings, truncation with accessible access to complete content, responsive spacing, safe areas, scroll and overlay layering. Compare empty/error and dense content alongside the happy path. Keep placeholders and decorative motion subordinate to meaningful content.
 
 ## Subtractive visual review
+
+For a substantial landing change, apply the [product-specific website acceptance gate](../oddmash-brand-design/references/product-website-direction.md#acceptance-before-handoff). Record concrete visible evidence for the primary action, hero artifact, full-page hierarchy and narrow layout. Investigate a large unexplained empty region, clipped focus, misaligned control/icon, or unsolicited sticky/scroll-following content before declaring ready.
 
 - Before adding or retaining a label, metric, badge, progress indicator, explanatory sentence or control, identify the specific user decision it supports. Remove it when the result, adjacent content or existing control communicates the same information. Do not default to pills, badges, separate columns, progress indicators, or additional text for ordinary states. Use the lightest legible signal that conveys the required meaning. Keep essential accessibility semantics and measured values needed for an actual input constraint.
 - Inspect the entire rendered page at desktop, representative mobile and the narrow supported breakpoint. Then inspect high-risk components at their actual allocated width, including tab lists, toolbars, copy buttons and overlays. Check both axes of internal overflow, alignment and clipping; do not accept document-level reflow alone. Reserve scrollbar behavior for intentionally scrollable content such as long code, not ordinary controls.

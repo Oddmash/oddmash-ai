@@ -14,9 +14,20 @@ Choose the dominant visitor task, not a fixed landing template. Combine paths wh
 | Game or entertainment | Understand the experience and play | Gameplay, core loop, controls, genuine atmosphere, distinctive art direction and motion tied to the game; play/download and platform requirements. |
 | Studio or portfolio | Understand the maker and inspect projects | Distinct editorial voice, recognizable work, real project artifacts and clear project links; avoid generic agency claims. |
 
-For example, Kowrap should foreground text at the same measured width before/after and readable API documentation. Boundra needs to demonstrate its actual boundary-checking workflow with verified code and results. A game-focused planning tool should foreground its actual map workflow and visual identity, not a generic developer-tool dashboard. Treat these as examples of reasoning, not layouts to reproduce.
+For example, Juliya should foreground text at the same measured width before/after and readable API documentation. Boundra needs to demonstrate its actual boundary-checking workflow with verified code and results. A game-focused planning tool should foreground its actual map workflow and visual identity, not a generic developer-tool dashboard. Treat these as examples of reasoning, not layouts to reproduce.
+
+## Maintainer-preferred reference sites
+
+Use the current [Oddmash Website](https://oddmash.github.io/oddmash-website/) and [Juliya](https://oddmash.github.io/juliya/) as the maintainer's visual references. Inspect their current rendered pages and relevant product guidance before borrowing principles; record the observed reference traits. The public Juliya landing is `/juliya/` (the legacy installer identifier does not define its site route). If inaccessible, use the repository's current README and product guidance and report the visual evidence gap.
+
+- Oddmash Website: carbon background, large left-aligned headline, restrained navigation, a single brand mark as the hero focal point, a compact project gallery and clear editorial hierarchy, distinctive role illustrations and purposeful workflow motion, natural document scrolling, detailed content on dedicated routes.
+- Juliya: restrained carbon/neutral surfaces, large white type, succinct left-side copy, two distinct first-use actions, one genuine interactive demonstration as the focal point, synchronized examples and code, native developer documentation.
+- Transfer the restraint, visual rhythm, evidence-led hierarchy, clear interaction and intentional motion, not the exact colors, component arrangements, artwork, or page structure. A game, product or library keeps its own visual identity.
+- For a material redesign, compare the candidate against these references on content density, whitespace, hierarchy and first-action discoverability. Do not claim visual parity without inspecting actual renders.
 
 ## Design from identity
+
+For a new or material redesign, use a short direction record with two compositions, real visual reference or product artifact provenance, and the reason the chosen layout serves the first useful action. Do not make collection of references a blocker for a small requested edit. Establish an explicit above-the-fold reading order at desktop and narrow widths; avoid burying a first usable example below generic copy. Choose one primary action per decision point; retain secondary destinations only when they serve distinct outcomes.
 
 - Choose a composition around one irreplaceable product artifact. Compare at least two genuinely different compositions for a substantial redesign (for example a single transforming artifact vs simultaneous comparison). Consider removing existing UI before adding to it; choose by visitor task, not trend or existing markup. Define the typography roles, semantic colors, spacing rhythm, shape language, imagery and motion before polishing.
 - Use actual screens, code, outputs, diagrams or gameplay rather than fabricated dashboards, stock filler, or decorative abstract 3D art. Use custom illustration only when it communicates something specific and has appropriate rights.
@@ -45,6 +56,8 @@ Inspect actual rendered desktop and mobile screenshots and interact with the fir
 Do not promise uniqueness from a checklist alone. Validate against actual content and rendered evidence; if the product cannot be run, label illustrative material and report the missing evidence.
 
 ## Subtractive composition gate
+
+For material landing changes, capture and inspect full-page renders and critical crops at representative desktop, mobile and the narrow supported breakpoint. Compare actual before/after renders when redesigning. Inspect the first useful action end-to-end, header and navigation, demo/code area, footer, localized long copy and interaction states. Check computed layout and screenshot geometry for blank gaps, clipping, internal scrollbars, image crop, misaligned icon/label pairs and competing focal points. Check intermediate animation frames for overlapping glyphs or unreadable text as well as the initial and settled states. Test scroll position and motion interruption; automatic content must not unexpectedly follow scrolling or obscure reading. A visual review must report concrete observed defects (or explicitly unverified surfaces) rather than treating green CI as design acceptance.
 
 For each section, state its distinct job in the visitor journey. Remove redundant sections, repeated descriptions, implementation telemetry and decorative controls. Put installation and a real integration example near the first product proof for libraries unless a stronger visitor task justifies another order. Inspect the actual visual density, component allocation, responsive toolbar wrapping and internal overflow; keep deliberate scrolling for long content while ensuring controls do not acquire accidental scrollbars. Require an intentional visual review after functional CI rather than relying on it.
 

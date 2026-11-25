@@ -30,5 +30,6 @@ Before reporting a change as release-ready, use [quality assurance](../oddmash-q
 
 ## Runtime advisory guidance
 
+- For release notes, verify external human contributors against the included changes; deduplicate their GitHub logins and put real mentions in the final acknowledgment only when present. Exclude maintainer and bot accounts, preserve historical releases, and never invent identities. GitHub renders the native Contributors section; verify actual avatars only after authorized publication.
 - Draft release notes from evidenced user-visible changes. Suggest version impact, compatibility and migration notes when the supplied repository policy and contracts support them.
 - Distinguish observed candidate checks from remaining verification. State uncertainty when release metadata is partial and report operational follow-up as a recommendation for the maintainer.

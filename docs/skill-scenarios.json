@@ -1,0 +1,120 @@
+[
+  {
+    "id": "library-landing",
+    "prompt": "Redesign a developer library landing so a first-time user can install it and see real behavior.",
+    "primary": [
+      "oddmash-product-planning",
+      "oddmash-ux-design",
+      "oddmash-brand-design"
+    ],
+    "support": [
+      "oddmash-developer-documentation",
+      "oddmash-web-delivery",
+      "oddmash-visual-clarity",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Show real product input/output and one useful action before decorative content.",
+      "Compare two composition directions; consult Oddmash Website and Juliya without forcing their theme.",
+      "Review desktop and mobile renders and report observed defects."
+    ],
+    "avoid": [
+      "Fabricated dashboards or invented benchmark claims.",
+      "Automatic inclusion of every motion pattern."
+    ]
+  },
+  {
+    "id": "juliya-proof",
+    "prompt": "The native and enhanced text have equal line breaks, but the demo says wrapping improved; animation follows scrolling.",
+    "primary": [
+      "kowrap-landing",
+      "oddmash-motion-content-transition"
+    ],
+    "support": [
+      "oddmash-internationalization",
+      "oddmash-motion-layout-transition",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Compare measured actual layouts and show no advantage when equal.",
+      "Keep normal scroll, pause offscreen and honor reduced motion."
+    ],
+    "avoid": [
+      "Fake differences or hardcoded word positions.",
+      "Unrequested global sticky animation."
+    ]
+  },
+  {
+    "id": "game-landing",
+    "prompt": "Create a landing page for a cooperative game with a verified gameplay capture.",
+    "primary": [
+      "oddmash-product-planning",
+      "oddmash-ux-design",
+      "oddmash-brand-design"
+    ],
+    "support": [
+      "oddmash-web-delivery",
+      "oddmash-visual-clarity"
+    ],
+    "expected": [
+      "Show actual gameplay and core loop; choose the game's own identity.",
+      "Make play/download and platform requirements clear."
+    ],
+    "avoid": [
+      "Copying Juliya's palette or forcing API docs."
+    ]
+  },
+  {
+    "id": "small-doc-fix",
+    "prompt": "Correct one incorrect API option in the developer docs.",
+    "primary": [
+      "oddmash-developer-documentation"
+    ],
+    "support": [
+      "oddmash-quality-assurance",
+      "oddmash-git-workflow"
+    ],
+    "expected": [
+      "Verify current public API contract and corrected example.",
+      "Keep change scoped."
+    ],
+    "avoid": [
+      "Redesigning the landing or loading unrelated design skills."
+    ]
+  },
+  {
+    "id": "release-external",
+    "prompt": "Prepare notes for a release with one verified external contributor, maintainer commits and agent reviews.",
+    "primary": [
+      "oddmash-release-management"
+    ],
+    "support": [
+      "oddmash-git-workflow"
+    ],
+    "expected": [
+      "Use actual included changes and final external-only acknowledgment.",
+      "Keep publishing separate from advice."
+    ],
+    "avoid": [
+      "Bot or maintainer avatars, invented identities, or unauthorized publication."
+    ]
+  },
+  {
+    "id": "legacy-adoption",
+    "prompt": "Fix wrapping on a consumer pinned to a working legacy Kowrap package.",
+    "primary": [
+      "oddmash-internationalization",
+      "oddmash-web-delivery"
+    ],
+    "support": [
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Verify current dependency/API and real rendering before suggesting migration.",
+      "Use Juliya for new compatible adoption; preserve legacy deployment until authorized migration."
+    ],
+    "avoid": [
+      "Blind package rename or hardcoded breaks."
+    ]
+  }
+]
