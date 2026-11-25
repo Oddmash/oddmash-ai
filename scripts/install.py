@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 LOCAL_LINK = re.compile(r"\]\(([^\s)]+)\)")
 PRODUCTS = ("kowrap", "oddmash-ui")
+PRODUCT_ALIASES = {"juliya": "kowrap"}
 
 
 def manifests(root):
@@ -75,7 +76,7 @@ def install(files, target, check=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--target", type=Path, default=Path.home() / ".agents" / "skills")
-    parser.add_argument("--product", choices=PRODUCTS)
+    parser.add_argument("--product", choices=(*PRODUCT_ALIASES, *PRODUCTS))
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--check", action="store_true", help="check without creating links")
     mode.add_argument("--validate", action="store_true", help="only validate the repository")
@@ -86,7 +87,7 @@ def main():
             print(f"Validated {count} skills.")
             return
         shared, products = manifests(ROOT)
-        files = products[args.product] if args.product else shared
+        files = products[PRODUCT_ALIASES.get(args.product, args.product)] if args.product else shared
         target = args.target.expanduser()
         pending = install(files, target, args.check)
         if args.check:
