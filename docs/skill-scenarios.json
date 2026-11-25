@@ -24,6 +24,25 @@
     ]
   },
   {
+    "id": "peer-resource-card-navigation",
+    "prompt": "Two resource cards have different description lengths and mismatched link alignment. Some GitHub icons have tiny hit areas and one resource has no published registry package. Improve navigation without removing local documentation or making separate links conflict with the card destination.",
+    "primary": [
+      "oddmash-ux-design"
+    ],
+    "support": [
+      "oddmash-accessibility",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Keep a meaningful native primary link and distinct utility destinations; align equivalent action groups and prefer comfortable standalone icon targets.",
+      "Verify real links, click routing, keyboard focus and narrow and wide layouts with unequal localized copy."
+    ],
+    "avoid": [
+      "Nested links, whole-container click handlers, fabricated registry links or overlapping hit areas.",
+      "Fixed-height cards that clip longer descriptions or a bottom-right action rule applied to unrelated card types."
+    ]
+  },
+  {
     "id": "juliya-proof",
     "prompt": "The native and enhanced text have equal line breaks, but the demo says wrapping improved; animation follows scrolling.",
     "primary": [
