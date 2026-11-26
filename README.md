@@ -5,7 +5,7 @@ Reusable instructions for people and coding agents working on Oddmash products, 
 | Area | Skills |
 | --- | --- |
 | Product definition | [Product planning](skills/oddmash-product-planning/SKILL.md) |
-| Experience and visual direction | [UX design](skills/oddmash-ux-design/SKILL.md), [Brand design](skills/oddmash-brand-design/SKILL.md), [Logo design](skills/oddmash-logo-design/SKILL.md), [Motion design](skills/oddmash-motion-design/SKILL.md) |
+| Experience and visual direction | [UX design](skills/oddmash-ux-design/SKILL.md), [Dashboard design](skills/oddmash-dashboard-design/SKILL.md), [Brand design](skills/oddmash-brand-design/SKILL.md), [Logo design](skills/oddmash-logo-design/SKILL.md), [Motion design](skills/oddmash-motion-design/SKILL.md) |
 | Developer documentation | [Developer documentation](skills/oddmash-developer-documentation/SKILL.md) |
 | Motion patterns | [Content transitions](skills/oddmash-motion-content-transition/SKILL.md), [Entrance and reveal](skills/oddmash-motion-entrance-reveal/SKILL.md), [Layout transitions](skills/oddmash-motion-layout-transition/SKILL.md), [Control microinteractions](skills/oddmash-motion-microinteraction/SKILL.md), [Feedback motion](skills/oddmash-motion-feedback/SKILL.md) |
 | Engineering | [Technical architecture](skills/oddmash-technical-architecture/SKILL.md), [Web delivery](skills/oddmash-web-delivery/SKILL.md), [Motion implementation](skills/oddmash-motion-implementation/SKILL.md) |
@@ -23,6 +23,7 @@ Use one primary owner for each question. Select only applicable specialists rath
 | --- | --- | --- |
 | Who is this for, and what must the product prove? | Product planning | Product marketing for messaging; growth for post-launch evidence |
 | What journey and controls does the user need? | UX design | Accessibility for applicable constraints |
+| How should an operator inspect activity, failures and data? | Dashboard design | UX design, Visual clarity, Quality assurance |
 | What should it look like? | Brand design | Product identity and shared design tokens |
 | How should a product mark be created or refined? | Logo design | Brand design for the wider identity; licensing for provenance |
 | What should move, and why? | Motion design | Select only the relevant motion pattern; implementation handles timing and geometry |
@@ -34,6 +35,8 @@ Use one primary owner for each question. Select only applicable specialists rath
 A current authorized requirement takes precedence over a revisable design preference, within applicable authority, public contracts and accessibility requirements. Shared geometry, motion timings and composition patterns are defaults, not acceptance conditions. Existing UI is a hypothesis to inspect. When a user repeatedly identifies the same kind of defect, re-evaluate the owning decision and the whole affected journey.
 
 For a new or substantially redesigned landing, start with product planning, UX and brand, then read the product-specific website direction and use its acceptance gate. For a small localized change, load the relevant owner only. Add motion design only if the proof benefits from motion, developer documentation for actual usage, and visual clarity plus QA before handoff. For a small API docs correction, start with developer documentation and the local contract; do not load every landing skill. For an operational or backend change, use the appropriate engineering or operations owner, not the design bundle.
+
+For an operator console or workflow redesign, start with dashboard design and its product brief; require independent visual clarity and QA evidence of the changed tasks, including supported themes and locales. Functional CI is not visual acceptance.
 
 Product-specific commands, contracts, and deployment policies stay with the product.
 
