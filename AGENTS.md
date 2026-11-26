@@ -1,5 +1,7 @@
 # Oddmash skills repository
 
+Follow the [Oddmash concurrent work claims](https://github.com/Oddmash/.github/blob/main/AGENTS.md#concurrent-work-claims) and organization collaboration rules before implementation, review, CI retries, or merges.
+
 Follow the [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). This repository owns reusable skill text and installation tooling. Product repositories own their build commands, deployment, API contracts, and local instructions.
 
 - Use English for skill manifests, instructions, and commit messages. Keep names stable across changes and make activation boundaries explicit.
