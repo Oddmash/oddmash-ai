@@ -16,6 +16,8 @@ Read the released or approved public API, package exports, supported versions, r
 - Keep code and technical terms visually distinct. Put selection, language and copy controls near their content only when useful; copy the current complete snippet, preserving whitespace and reporting actual success or failure. Use independent package-manager or framework options when commands are alternatives rather than telling users to run mutually exclusive commands.
 - Use readable typography, sufficient contrast, responsive tables with deliberate horizontal scrolling for long signatures, and consistent code-block spacing. Do not create incidental inner scrollbars, clipped controls, or wrapped short headings. Use [visual clarity](../oddmash-visual-clarity/SKILL.md) for rendered review and [accessibility](../oddmash-accessibility/SKILL.md) for applicable requirements.
 
+- Route instructional diagrams, videos and animated technical examples to [visual media](../oddmash-visual-media/SKILL.md). Keep the article responsible for the explanation and the embedded scene focused on the actual mechanism.
+
 ## Source, release and evidence
 
 - Keep one authoritative documentation source; derive rendered pages and agent-readable artifacts from it. Delegate metadata, indexing, public llms.txt and Markdown artifact details to [discoverability](../oddmash-discoverability/SKILL.md), not a second documentation source. Keep private content out of public outputs.
