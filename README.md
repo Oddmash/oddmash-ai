@@ -6,7 +6,7 @@ Reusable instructions for people and coding agents working on Oddmash products, 
 | --- | --- |
 | Product definition | [Product planning](skills/oddmash-product-planning/SKILL.md) |
 | Experience and visual direction | [UX design](skills/oddmash-ux-design/SKILL.md), [Dashboard design](skills/oddmash-dashboard-design/SKILL.md), [Brand design](skills/oddmash-brand-design/SKILL.md), [Logo design](skills/oddmash-logo-design/SKILL.md), [Motion design](skills/oddmash-motion-design/SKILL.md) |
-| Developer documentation | [Developer documentation](skills/oddmash-developer-documentation/SKILL.md) |
+| Developer documentation | [Developer documentation](skills/oddmash-developer-documentation/SKILL.md), [Visual media](skills/oddmash-visual-media/SKILL.md) |
 | Motion patterns | [Content transitions](skills/oddmash-motion-content-transition/SKILL.md), [Entrance and reveal](skills/oddmash-motion-entrance-reveal/SKILL.md), [Layout transitions](skills/oddmash-motion-layout-transition/SKILL.md), [Control microinteractions](skills/oddmash-motion-microinteraction/SKILL.md), [Feedback motion](skills/oddmash-motion-feedback/SKILL.md) |
 | Engineering | [Technical architecture](skills/oddmash-technical-architecture/SKILL.md), [Web delivery](skills/oddmash-web-delivery/SKILL.md), [Motion implementation](skills/oddmash-motion-implementation/SKILL.md) |
 | Cross-cutting checks | [Visual clarity](skills/oddmash-visual-clarity/SKILL.md), [Accessibility](skills/oddmash-accessibility/SKILL.md), [Copyright and licensing](skills/oddmash-copyright-licensing/SKILL.md), [Security and privacy](skills/oddmash-security-privacy/SKILL.md) |
@@ -26,6 +26,7 @@ Use one primary owner for each question. Select only applicable specialists rath
 | How should an operator inspect activity, failures and data? | Dashboard design | UX design, Visual clarity, Quality assurance |
 | What should it look like? | Brand design | Product identity and shared design tokens |
 | How should a product mark be created or refined? | Logo design | Brand design for the wider identity; licensing for provenance |
+| How should instructional videos, diagrams and visual demonstrations be produced? | Visual media | Content transitions, developer documentation, visual clarity and accessibility |
 | What should move, and why? | Motion design | Select only the relevant motion pattern; implementation handles timing and geometry |
 | How should users learn and use a public API? | Developer documentation | Technical architecture for contracts; discoverability for indexing and agent-readable outputs |
 | How should the change be implemented? | Web delivery or technical architecture | Product playbook, local repository rules |
