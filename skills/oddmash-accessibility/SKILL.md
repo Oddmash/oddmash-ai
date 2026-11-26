@@ -8,6 +8,7 @@ description: Design and verify accessible Oddmash interfaces and components agai
 Verify the actual interface, not just markup. Prefer semantic HTML to custom ARIA.
 
 - Check keyboard operation, accessible names, logical focus, visible focus, escape and focus restoration. Distinguish action buttons with changing labels from toggles with stable names and aria-pressed.
+- For modal dialogs and search palettes, verify focus containment and background scroll containment independently. Exercise empty, loading, no-result and populated states with Tab/Shift+Tab, arrows, page keys, wheel and touch; preserve native text editing and IME composition. The background must not scroll or shift when the modal is active. Close via each supported mechanism, restore the initiating focus and prior scroll position without leaving a lock behind, and verify repeated opening and route changes. Avoid redundant native/custom controls.
 - Check contrast, applicable target size, reflow and zoom. Use 4.5:1 for normal text and 3:1 for large text; do not rely on color alone.
 - Present meaningful asynchronous feedback visibly and through a pre-existing, separate live region. Preserve focus.
 - Honor reduced motion through existing platform preferences where practical; do not introduce a separate preferences UI by default. Automatically started movement lasting over five seconds alongside other content needs a pause, stop or hide mechanism unless essential. Automatically updating content has no five-second exception. Repetition itself is not prohibited.
