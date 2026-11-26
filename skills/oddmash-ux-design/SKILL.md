@@ -23,3 +23,5 @@ Read the product brief and inspect the actual current workflow. Identify the use
 - Read [accessibility](../oddmash-accessibility/SKILL.md) and [security and privacy](../oddmash-security-privacy/SKILL.md) for acceptance criteria before handoff.
 
 - Where relevant, design authentication and recovery screens, email verification, session expiry, saved/draft/conflict indicators, unsaved-change confirmation, import/export, undo, upload progress and optimistic rollback; preserve the user's task across recoverable interruptions. Use [sharing](../oddmash-sharing-distribution/SKILL.md) and [internationalization](../oddmash-internationalization/SKILL.md) for affected surfaces.
+
+For operational dashboards, workflow histories and monitoring consoles, route the task hierarchy and responsive data presentation to [dashboard design](../oddmash-dashboard-design/SKILL.md). Preserve the existing UX and accessibility requirements.

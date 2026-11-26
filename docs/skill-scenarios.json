@@ -195,5 +195,26 @@
     "avoid": [
       "Generic looping particles, scroll hijacking or fabricated product results."
     ]
+  },
+  {
+    "id": "operator-dashboard",
+    "prompt": "Redesign an agent operations dashboard where the fixed canvas is tiny, tools clutter the view, and failed attempts are difficult to find.",
+    "primary": [
+      "oddmash-dashboard-design"
+    ],
+    "support": [
+      "oddmash-ux-design",
+      "oddmash-visual-clarity",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Compare a responsive observed-role layout with the current fixed canvas.",
+      "Expose failed attempts and recorded timing, preserve unknown and publication semantics.",
+      "Verify representative rendered desktop/mobile, light/dark and localized states separately from CI."
+    ],
+    "avoid": [
+      "Invented overall progress or causal execution sequence.",
+      "A passing build presented as visual acceptance."
+    ]
   }
 ]
