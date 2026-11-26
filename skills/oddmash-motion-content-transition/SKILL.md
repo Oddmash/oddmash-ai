@@ -5,7 +5,7 @@ description: Design and implement timed or user-triggered content rotation, auto
 
 # Content transition
 
-Use [motion design](../oddmash-motion-design/SKILL.md) for the product outcome and [motion implementation](../oddmash-motion-implementation/SKILL.md) for state and geometry.
+Use [motion design](../oddmash-motion-design/SKILL.md) for the product outcome and [motion implementation](../oddmash-motion-implementation/SKILL.md) for state and geometry. For instructional media composition and production, use [visual media](../oddmash-visual-media/SKILL.md).
 
 - Define the ordered scenes, the stable committed content, the automatic trigger, dwell, exit condition and manual-selection policy before implementing. Choose finite or continuous sequencing according to the product goal. For supplementary examples prefer a finite sequence unless repetition communicates meaningful behavior or is explicitly requested.
 - Make each scene visibly distinct and real. Change the committed state once; animate only its presentation. Keep a stable reserved region and avoid overlapping accessible text or cloning the same content for an illusion.
