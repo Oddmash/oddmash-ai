@@ -15,6 +15,10 @@ Follow the [Oddmash organization agreements](https://github.com/Oddmash/.github/
 
 Run `python3 -m unittest discover -s tests` for installation or validation changes.
 
+## GitHub account use
+
+Follow the [Oddmash GitHub account policy](https://github.com/Oddmash/.github/blob/main/docs/github-account-policy.md). Use `arvynoo` for AI-authored commits, issues and PRs with command-scoped authentication and a separate checkout or worktree per session. Only `qtaghdi` gives final approval to and manually merges external contributions.
+
 ## Applying shared and product guidance
 
 Start from the latest authorized user goal, within applicable safety, repository authority, public contracts and accessibility requirements. Establish product purpose and first useful action, then choose the smallest usable design. Apply shared defaults only when they serve that purpose. Existing implementation, screenshots and previous layout choices are evidence and constraints to inspect, not automatic reasons to preserve UI. If they conflict with an authorized redesign, update the decision and its outcome-based tests together; do not weaken real compatibility or accessibility checks.
