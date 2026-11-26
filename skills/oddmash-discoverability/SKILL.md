@@ -9,6 +9,7 @@ Identify which pages should be discoverable, for whom and in which locales. Keep
 
 - For public library, SDK, API and developer-tool docs, use [developer documentation](../oddmash-developer-documentation/SKILL.md) for the human-facing content and API contract. Own [agent-readable public documentation](references/agent-readable-docs.md) generation and verification of llms.txt, Markdown and relevant machine-readable references from those sources.
 - Map public routes and meaningful query states. Choose canonical URLs, stable slugs, redirect behavior, HTTP status, sitemap coverage and robots directives deliberately. Do not treat robots or noindex as privacy controls.
+- For Search Console ownership, sitemap submission, and crawler validation on public sites, use [external search verification](references/external-search-verification.md).
 - Ensure unique truthful titles, descriptions, semantic headings, crawlable links, meaningful alt text, favicon and share metadata. Use structured data only when applicable and supported by actual visible content; avoid fabricated ratings or claims.
 - For localized pages, coordinate locale URLs, language metadata, alternate links and canonical choices with [internationalization](../oddmash-internationalization/SKILL.md). Test long, missing and translated content.
 - Verify server-rendered output, hydration, broken links, redirects, indexable content, useful 404s, metadata and performance on representative devices. Use official search-provider validation tools when relevant; do not claim indexing or ranking without evidence.
