@@ -25,7 +25,7 @@ Own visual explanation production. Use this skill when an article, documentation
 ## Direct motion
 
 - Animate the actual changing attribute, position, relationship, or focus rather than repeatedly replacing or fading the entire scene.
-- Make the causal sequence clear: input, response, outcome. Keep persistent elements visible and allow enough dwell time to inspect intermediate and final states.
+- Make the causal sequence clear: input, response, outcome. Show the pointer arriving or the key being pressed before feedback when the input explains the result. For example, let the original selection stay visible as a dropdown opens, then change the affected fields after the selection. Keep persistent elements visible and hold the result long enough to read.
 - Use consistent easing and restrained durations appropriate to the content. Avoid abrupt flashes, rapid resets, gratuitous zooming, and motion that competes with reading.
 - When looping, design a comprehensible reset, pause when offscreen or the page is inactive, honor reduced-motion preferences, and allow users to stop playback.
 - Route content changes to oddmash-motion-content-transition and geometry or implementation details to oddmash-motion-implementation.
