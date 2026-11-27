@@ -1,0 +1,41 @@
+name: Import Skills history (one-time)
+on:
+  push:
+    branches: [chore/import-skills-history]
+    paths: ['.github/workflows/import-skills-history.yml']
+permissions:
+  contents: write
+concurrency:
+  group: import-skills-history
+  cancel-in-progress: false
+jobs:
+  import:
+    if: github.repository == 'Oddmash/oddmash-ai' && github.actor_id == '135234546'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: d4e2d16bfe6b637ece4d190080e03cc6f570e2da
+          fetch-depth: 0
+      - name: Import immutable public source history into a new branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          agents=d4e2d16bfe6b637ece4d190080e03cc6f570e2da
+          skills=7c929f59afc71008c28156a2cbb5b8d93a6e2a2d
+          target=refs/heads/migration/unified-source
+          test "$(git rev-parse HEAD)" = "$agents"
+          test -z "$(git ls-remote --heads origin "$target")"
+          git -c credential.helper= fetch --no-tags https://github.com/Oddmash/oddmash-skills.git refs/heads/main
+          test "$(git rev-parse FETCH_HEAD)" = "$skills"
+          git read-tree --prefix=catalog/ -u "$skills"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          tree="$(git write-tree)"
+          commit="$(git commit-tree "$tree" -p "$agents" -p "$skills" -m 'refactor: integrate the Skills source tree and preserve both histories' -m 'Refs #1')"
+          git merge-base --is-ancestor "$agents" "$commit"
+          git merge-base --is-ancestor "$skills" "$commit"
+          test "$(git rev-parse "$commit:catalog")" = "$(git rev-parse "$skills^{tree}")"
+          git push origin "$commit:$target"
+          test "$(git ls-remote origin "$target" | cut -f1)" = "$commit"
