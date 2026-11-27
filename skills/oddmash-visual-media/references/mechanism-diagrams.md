@@ -28,7 +28,7 @@ Use a list for straightforward prose or a simple linear sequence. Use a table fo
 - A library that changes from one global stylesheet to component-owned CSS: compare the same consumer imports, show which CSS files each reaches, and identify the shared dependency. Do not chain two unrelated component examples as consecutive events.
 - Two editors starting at the same revision: place the editors and authoritative store on distinct lanes, show which write succeeds, the rejected stale write, and the retained revision. Do not claim automatic merge if none exists.
 - A workflow with current and superseded checks: show decision conditions and distinguish waiting, failed, and eligible outcomes using the documented semantics. Avoid speculative internal roles or a happy-path-only transcript.
-- A text layout utility: hold text, font and width constant for the native and enhanced results. If a live comparison is feasible, use actual engine output; verify a changed input genuinely changes the result. Otherwise label a manually constructed example as illustrative, not a measured result.
+- A text layout utility: hold text, font and width constant for the native and enhanced results. If a live comparison is feasible, use actual engine output; check input changes that produce different results and cases where output stays equal; never force a visual difference or imply improvement when the result is unchanged. Otherwise label a manually constructed example as illustrative, not a measured result.
 
 ## Acceptance
 
