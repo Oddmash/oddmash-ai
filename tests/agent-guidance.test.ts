@@ -13,7 +13,7 @@ test('all roles use bounded, pinned catalog guidance with distinct Impact and Tr
   assert.equal(new Set(skills.map(skill => skill.revision)).size, 1);
   for (const skill of skills) {
     assert.match(skill.revision, /^[a-f0-9]{40}$/);
-    assert.match(skill.path, /^skills\/oddmash-[a-z-]+\/SKILL\.md$/);
+    assert.match(skill.path, /^catalog\/skills\/oddmash-[a-z-]+\/SKILL\.md$/);
     assert.match(skill.text, /^- /);
     assert.ok(Buffer.byteLength(skill.text) <= 2400);
     assert.equal(privateSensitiveText(skill.text), false);

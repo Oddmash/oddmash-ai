@@ -1,0 +1,48 @@
+name: Catalog runtime
+on:
+  pull_request:
+    branches: [main, migration/unified-source]
+    paths:
+      - 'catalog/**'
+      - 'scripts/agent-skill-*'
+      - 'scripts/bundle-agent-skills.mjs'
+      - 'apps/worker/src/agent-skill-bundle.ts'
+      - 'tests/agent-guidance.test.ts'
+      - '.github/workflows/catalog-runtime.yml'
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bundle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+      - run: node --test scripts/agent-skill-guidance.test.mjs
+      - run: node scripts/bundle-agent-skills.mjs --check
+  stacked-agent-tests:
+    if: github.event_name == 'pull_request' && github.base_ref == 'migration/unified-source'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm run typecheck
+      - run: pnpm test
+      - run: pnpm --filter @oddmash/agents-console typecheck
+      - run: pnpm --filter @oddmash/agents-console build
