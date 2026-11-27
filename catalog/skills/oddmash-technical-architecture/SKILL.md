@@ -1,0 +1,28 @@
+---
+name: oddmash-technical-architecture
+description: Assess or design an Oddmash technical architecture, API or data contract, dependency choice, system boundary, or migration before materially changing a product.
+---
+
+# Oddmash technical architecture
+
+Read the current architecture, repository agreements, runtime constraints, public contracts, and the concrete requirement. Prefer the smallest change that preserves existing behavior and can be verified.
+
+- Map affected boundaries, ownership, data flow, and failure behavior. Separate domain logic from rendering and transport where that creates a stable testable boundary. Keep product-specific decisions in the product repository.
+- Compare a small set of viable options against compatibility, maintenance, latency, complexity, cost, deployment constraints, and reversibility. Record why a dependency or abstraction earns its place rather than selecting it by popularity.
+- For shared library adoption, identify the supported adapter, runtime/SSR boundaries, bundle cost, fallback behavior, dependency versioning and downstream regression fixtures. Keep consumer-specific fixes separate from library fixes; use an independently reviewable upstream PR and supported release before upgrading the consumer.
+- Define contracts and invariants explicitly: types, errors, state transitions, data ownership, versions, and supported consumers. For migrations, identify old and new readers/writers, rollback conditions, and how existing data remains compatible.
+- For sensitive data, define which component may access it and minimize permissions, retention, and disclosure. Use safe defensive design review; do not execute untrusted code or develop attacks. Do not assume authorization to access production systems.
+- Document the selected design, rejected alternatives, unresolved risks, and a first independently verifiable implementation slice. Validate with the product's actual tests and runtime.
+
+Use [quality assurance](../oddmash-quality-assurance/SKILL.md) for verification design and [web delivery](../oddmash-web-delivery/SKILL.md) for frontend implementation.
+
+- For async operations define initial/refresh states, cancellation and latest-request handling, idempotency for consequential writes, bounded retries, timeouts, offline behavior, cache invalidation, partial results and safe recovery. Tie UI states to actual contracts.
+- Plan operational ownership for one maintainer: minimum service footprint, dependency updates, cost limits, quota handling, observability without personal data, backup/restore, migration checks, incident and rollback paths. Consult [privacy](../oddmash-security-privacy/SKILL.md) for data lifecycle and [release management](../oddmash-release-management/SKILL.md) for launch gates.
+
+- For authenticated products, define sign-in, registration, account linking/recovery, verification, session refresh/expiry, sign-out, role changes and account closure contracts. Prefer maintained providers when appropriate; enforce authorization server-side and verify permitted and denied synthetic cases. Never introduce authentication where the product does not require it.
+- For editable data, define draft/autosave boundaries, save indicators, version/conflict behavior, optimistic updates and rollback, import/export, undo or deletion recovery, retention, offline synchronization and migration. Avoid silent overwrite or indefinite storage of sensitive drafts.
+
+## Runtime advisory guidance
+
+- Identify the changed boundary, affected consumer, and observable failure or compatibility effect supported by supplied contracts and code.
+- Recommend a focused improvement when it preserves a required invariant or reduces a concrete maintenance risk. Explain the trade-off and what would verify it. Treat missing architecture context as uncertainty.
