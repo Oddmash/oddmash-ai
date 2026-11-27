@@ -1,4 +1,11 @@
-# Oddmash Agents
+# Oddmash AI
+
+Oddmash AI brings the reusable Skills catalog and the Agents runtime into one source repository. The catalog is independently installable, and the existing agent operating and release boundaries remain unchanged during migration.
+
+- [Skills catalog](catalog/README.md) and [installation guide](catalog/CONTRIBUTING.md)
+- [Migration status](docs/unified-source-migration.md)
+
+## Oddmash Agents
 
 Advisory agents for Oddmash products. Lead coordinates specialized agents, identifies concrete regressions in pull requests, and issues the formal review while preserving project-specific conventions and maintainer control.
 
