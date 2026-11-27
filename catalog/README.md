@@ -47,7 +47,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for installation and maintenance, and [in
 
 ## Integration
 
-Skills remain independently installable for people and coding assistants. The [Agents workspace](../README.md#oddmash-agents) in this repository owns executable automation and may adopt reviewed skill revisions through the [immutable bundle contract](../docs/skill-integration.md). Existing installations from the [legacy Skills repository](https://github.com/Oddmash/oddmash-skills) remain valid during the transition. Organization-wide authority and collaboration rules live in [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). Agent deployments and skill updates have separate lifecycles. Catalog releases use `skills-vMAJOR.MINOR.PATCH`; agent releases use `vMAJOR.MINOR.PATCH`.
+Skills remain independently installable for people and coding assistants. The [Agents workspace](https://github.com/Oddmash/oddmash-ai/blob/main/README.md#oddmash-agents) in this repository owns executable automation and may adopt reviewed skill revisions through the [immutable bundle contract](https://github.com/Oddmash/oddmash-ai/blob/main/docs/skill-integration.md). Existing installations from the [legacy Skills repository](https://github.com/Oddmash/oddmash-skills) remain valid during the transition. Organization-wide authority and collaboration rules live in [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). Agent deployments and skill updates have separate lifecycles. Catalog releases use `skills-vMAJOR.MINOR.PATCH`; agent releases use `vMAJOR.MINOR.PATCH`.
 
 ## Solo-maintainer readiness
 
