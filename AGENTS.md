@@ -1,4 +1,6 @@
-# Oddmash Agents
+# Oddmash AI
+
+The repository has two independent ownership areas. `catalog/` owns reusable guidance, installation and catalog distribution; its nested `AGENTS.md` governs that area. `apps/`, `packages/`, `api/` and agent-specific tooling own executable services and the operator console. Root CI and documentation coordinate both areas without granting additional operational authority. Keep catalog installation and runtime release independent. A catalog change cannot silently alter a deployed runtime. During migration, the original service remains authoritative until a reviewed cutover.
 
 Follow the [Oddmash concurrent work claims](https://github.com/Oddmash/.github/blob/main/AGENTS.md#concurrent-work-claims) and organization collaboration rules before implementation, review, CI retries, or merges.
 

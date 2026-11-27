@@ -1,8 +1,8 @@
-# Oddmash skills repository
+# Oddmash Skills catalog
 
 Follow the [Oddmash concurrent work claims](https://github.com/Oddmash/.github/blob/main/AGENTS.md#concurrent-work-claims) and organization collaboration rules before implementation, review, CI retries, or merges.
 
-Follow the [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). This repository owns reusable skill text and installation tooling. Product repositories own their build commands, deployment, API contracts, and local instructions.
+Follow the [Oddmash organization agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md). This catalog directory owns reusable skill text and installation tooling. Agent runtime, authorization and service deployment are governed by the root repository instructions. Product repositories own their build commands, deployment, API contracts, and local instructions.
 
 - Use English for skill manifests, instructions, and commit messages. Keep names stable across changes and make activation boundaries explicit.
 - Apply the organization's plain-language convention in skill instructions and generated product copy. Avoid em dashes (U+2014), en dashes (U+2013) as sentence punctuation, decorative separators, and generic slogans; use direct sentences and preserve literal code or quotations.
@@ -27,8 +27,8 @@ Use the role map in [README.md](README.md). Load the primary decision owner, the
 
 ## Integration contract
 
-- This repository is the source of truth for reusable skills. Do not move agent runtime code, credentials, deployment policy, or product-specific authority here.
-- Agent maintainers consume skills by exact path at a reviewed immutable commit, with independent upgrade and rollback decisions. Preserve stable skill names and paths or document migrations.
+- This catalog directory is the source of truth for reusable skills. Keep agent runtime code, credentials, deployment policy and product-specific authority outside the catalog.
+- Agent maintainers consume skills by exact catalog path at a reviewed immutable commit, with independent upgrade and rollback decisions. Preserve stable skill names and paths or document migrations.
 - Keep implementation lessons in the skill that owns the decision. Link the public product evidence in the change record, and leave product selectors, spacing values, article catalogs, and release commands in the product repository. Record what was observed in automation, the browser, or production.
 - Changes to a skill's activation, expected evidence, or compatibility must describe the impact on consumers. A skill cannot grant access, approve a deployment, or override the organization agreements or target repository contracts.
 
