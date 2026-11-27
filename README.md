@@ -1,9 +1,27 @@
 # Oddmash AI
 
-Oddmash AI brings the reusable Skills catalog and the Agents runtime into one source repository. The catalog is independently installable, and the existing agent operating and release boundaries remain unchanged during migration.
+Oddmash AI is the unified development repository for the Oddmash Skills catalog and Agents runtime. Both share source history and CI while retaining independent installation, runtime adoption and release lifecycles.
 
-- [Skills catalog](catalog/README.md) and [installation guide](catalog/CONTRIBUTING.md)
-- [Migration status](docs/unified-source-migration.md) and [cutover checklist](docs/unified-cutover-checklist.md)
+| Component | Location | Getting started |
+| --- | --- | --- |
+| Skills | `catalog/` | [Catalog](catalog/README.md), [installation](catalog/CONTRIBUTING.md), [distribution](catalog/DISTRIBUTION.md) |
+| Agents | `apps/`, `packages/`, `api/` | [Development](CONTRIBUTING.md), [agent family](docs/agent-family.md), [release process](docs/release-process.md) |
+
+## Current status
+
+The source integration and CI are complete. Production still runs from the original [Oddmash Agents repository](https://github.com/Oddmash/oddmash-agents), and existing [Skills installations](https://github.com/Oddmash/oddmash-skills) remain supported during the transition. Production qualification and reviewer enrollment in this repository are paused pending maintainer configuration and authorization. See [migration status](docs/unified-source-migration.md), [cutover checklist](docs/unified-cutover-checklist.md) and [the open cutover issue](https://github.com/Oddmash/oddmash-ai/issues/11).
+
+## Install Skills independently
+
+From a stable checkout of this repository, use Python 3.9 or later:
+
+```sh
+python3 catalog/scripts/install.py --validate
+python3 catalog/scripts/install.py --check
+python3 catalog/scripts/install.py
+```
+
+No Node.js, agent credentials or hosted service is required. The installer preserves existing installations; follow the [migration guide](docs/unified-source-migration.md#independent-catalog-installation) before replacing legacy links.
 
 ## Oddmash Agents
 

@@ -1,6 +1,6 @@
 # Install and maintain
 
-Clone this repository into a stable local path. From the checkout, use Python 3.9 or later to run `python3 scripts/install.py` and link all shared skills into `~/.agents/skills`. Use `--target ~/.codex/skills` for an existing installation in that directory. Run the command with `--check` to check the destination without writing. [Codex local skill discovery](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
+Clone [Oddmash AI](https://github.com/Oddmash/oddmash-ai) into a stable local path and change into `catalog/`. All commands below are relative to that directory. From there, use Python 3.9 or later to run `python3 scripts/install.py` and link all shared skills into `~/.agents/skills`. Use `--target ~/.codex/skills` for an existing installation in that directory. Run the command with `--check` to check the destination without writing. [Codex local skill discovery](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
 
 For a product without a local copy, install the product playbook into its project skill directory. For Juliya:
 
@@ -16,7 +16,7 @@ Oddmash UI already ships its own project skills. Its central version is availabl
 
 Submit skill changes as ready-for-review PRs by default under the [shared Git workflow](skills/oddmash-git-workflow/SKILL.md); pending remote CI alone does not require a draft.
 
-This infrastructure repository targets `main` directly from focused topic branches. Skill checks run for main-targeted PRs and cancel superseded PR runs. This Python and Markdown repository has no package dependency install, preview deployment, or production publishing workflow to optimize; adoption by agents remains a separate reviewed immutable-revision update.
+This infrastructure repository targets `main` directly from focused topic branches. Skill checks run for main-targeted PRs and cancel superseded PR runs. The Python and Markdown catalog does not require Node.js, pnpm or the agent service. Root CI validates the catalog separately, and the [catalog distribution workflow](DISTRIBUTION.md) prepares archives independently of agent releases; adoption by agents remains a separate reviewed immutable-revision update.
 
 ```sh
 python3 -m unittest discover -s tests

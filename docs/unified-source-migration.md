@@ -1,6 +1,6 @@
 # Unified source migration
 
-This repository is the integration target for Oddmash Agents and Oddmash Skills. It is not yet the production deployment source.
+Oddmash AI is the unified development source for Oddmash Agents and Oddmash Skills. Source integration is complete and verified on main. It is not yet the production deployment source.
 
 | Source | Original revision | Location |
 | --- | --- | --- |
@@ -21,11 +21,21 @@ python3 catalog/scripts/install.py
 
 Keep the clone at a stable path. The installer creates links to the catalog and refuses to overwrite existing skills. Existing installations pointing to the original repository must be migrated deliberately; do not delete them or archive the old repository yet.
 
-## Remaining migration
+## Completed source integration
 
-- Establish an explicit catalog/runtime compatibility contract and reviewed immutable bundles.
-- Update repository identity references, scoped CI and independent release channels in separate reviewed changes.
-- Preserve existing release records, open work and installation paths.
-- Verify the new production target separately before switching any existing deployment or archiving the original repositories.
+- Both source histories are retained, with the catalog in `catalog/`.
+- Root CI validates the agent workspace and catalog independently.
+- The [immutable skill bundle contract](skill-integration.md) pins agent guidance to a reviewed unified commit.
+- The [independent catalog release channel](../catalog/DISTRIBUTION.md) is defined separately from agent releases.
+- The reviewed [cutover preparation](https://github.com/Oddmash/oddmash-ai/pull/12) passed CI and keeps deployment manual and disabled by default.
+
+## Pending operational migration
+
+- Maintainer configuration and explicit authorization of production qualification, staging and promotion.
+- Reviewer enrollment only after the production migration is verified.
+- Legacy open work, organization references and installation paths must be reconciled without disrupting contributor PRs or existing consumers.
+- Preserve legacy release records and rollback until the verified handoff; do not archive either original repository beforehand.
+
+Track the paused operational work in [issue #11](https://github.com/Oddmash/oddmash-ai/issues/11) and resume using the [cutover checklist](unified-cutover-checklist.md).
 
 The original agents deployment remains authoritative until the maintainer approves the verified cutover. No new application permissions or secrets are required for this source import.

@@ -1,6 +1,6 @@
 # Unified source cutover checklist
 
-Status: source integration is merged and verified on main. The deployment transition remains disabled. No production target, application permission, legacy issue or PR has been changed.
+Status: source integration and cutover preparation are merged and verified on main. Operational migration is paused pending maintainer configuration and explicit authorization. The protected production environment has been created, but deployment credentials and enable switches remain unset. No production target, application permission, legacy issue or PR has been changed. Track resumption in [issue #11](https://github.com/Oddmash/oddmash-ai/issues/11).
 
 ## Repository identities and historical source
 
@@ -43,7 +43,7 @@ Recheck this baseline and the actual active deployment immediately before any st
 
 The first replacement release uses the same Vercel project and existing production configuration. The unified workflow is manual-only during qualification; it does not synchronize or overwrite the existing Vercel environment, and it does not enroll the reviewer app in the new repository. Do not turn on automatic Git deployments.
 
-After independent review of the workflow, the maintainer must configure a protected `production` GitHub environment restricted to main and authorize the necessary deployment credentials directly in GitHub:
+The reviewed workflow and protected `production` GitHub environment restricted to main are prepared. The maintainer must authorize and configure the necessary deployment credentials directly in GitHub before qualification:
 
 - `VERCEL_TOKEN`: approved Vercel deployment credential.
 - `VERCEL_AUTOMATION_BYPASS_SECRET`: existing approved protected-staging smoke-test credential.
