@@ -18,4 +18,3 @@ export function runtimeGuidance(markdown, roleSection, path) {
   if (!text.startsWith('- ') || Buffer.byteLength(text, 'utf8') > 2_400) throw new Error('Runtime guidance must be bounded nonempty bullets in ' + path);
   return text;
 }
-
