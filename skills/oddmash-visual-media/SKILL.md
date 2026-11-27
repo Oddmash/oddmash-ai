@@ -26,6 +26,7 @@ Own visual explanation production. Use this skill when an article, documentation
 
 - Animate the actual changing attribute, position, relationship, or focus rather than repeatedly replacing or fading the entire scene.
 - Make the causal sequence clear: input, response, outcome. Show the pointer arriving or the key being pressed before feedback when the input explains the result. For example, let the original selection stay visible as a dropdown opens, then change the affected fields after the selection. Keep persistent elements visible and hold the result long enough to read.
+- When a simulated pointer or keystroke teaches the trigger, show the cue at rest before acting. Start with roughly one to two seconds when the cue would otherwise be easy to miss, and adjust to the scene. Keep the prior result during the cue, show the press or click, then reveal its consequence. Preserve that timing across pause and resume. Real user input should still receive immediate feedback.
 - Use consistent easing and restrained durations appropriate to the content. Avoid abrupt flashes, rapid resets, gratuitous zooming, and motion that competes with reading.
 - When looping, design a comprehensible reset, pause when offscreen or the page is inactive, honor reduced-motion preferences, and allow users to stop playback.
 - Route content changes to oddmash-motion-content-transition and geometry or implementation details to oddmash-motion-implementation.
@@ -34,6 +35,7 @@ Own visual explanation production. Use this skill when an article, documentation
 
 - Inspect the actual appearance at the beginning, intermediate frames, outcome, and loop boundary, not only the source or a final still.
 - Verify that the mechanism remains technically accurate, labels remain readable, geometry does not jump, and playback controls work by keyboard.
+- Sample just before and after input. Verify the cue is visible before the action, the prior result survives the wait, and the response follows the simulated input. Keep the complete states understandable without motion.
 - Check supported themes, narrow layouts, reduced motion, pause/resume, and visibility behavior where applicable.
 - Route technical correctness to oddmash-developer-documentation, rendered clarity to oddmash-visual-clarity, accessibility to oddmash-accessibility, and third-party asset provenance to oddmash-copyright-licensing.
 - Report unverified visual checks separately from passing build or structural checks.
