@@ -3,6 +3,7 @@ import { advisoryProfiles } from './advisory-agents.ts';
 import { boundedModelBody, recordUsage } from './model-request.ts';
 import { validAdvisory } from './advisory.ts';
 import { agentSkill, guidanceInstructions, loadProjectGuidance } from './agent-guidance.ts';
+import { latestAgentRelease, stableAgentTag } from './release-policy.ts';
 
 type Api = <T>(path: string) => Promise<T>;
 type File = { filename: string; previous_filename?: string };
@@ -10,7 +11,6 @@ type Compare = { status: string; behind_by: number; total_commits: number; merge
 type Run = { id: number; display_title: string; head_sha: string; event: string; status: string; conclusion: string | null; actor?: { id: number } };
 type Report = { en: string[]; ko: string[] };
 const sha = /^[a-f0-9]{40}$/;
-const tag = /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$/;
 const docOrTest = (path: string) => /^(?:docs\/.+\.md|(?:README|CONTRIBUTING|CHANGELOG|AGENTS)\.md|tests\/.+\.test\.[cm]?[jt]sx?)$/i.test(path);
 
 export function needsReleaseQA(files: File[] | undefined, complete: boolean): boolean {
@@ -24,12 +24,12 @@ export function reusablePreparation(runs: Run[], previous: string, candidate: st
 }
 
 export async function collectPreparation(api: Api, previous: string, candidate: string) {
-  if (!tag.test(previous) || previous.length > 64 || !sha.test(candidate)) throw new Error('Invalid release preparation inputs');
+  if (!stableAgentTag.test(previous) || previous.length > 64 || !sha.test(candidate)) throw new Error('Invalid release preparation inputs');
   const repository = 'Oddmash/oddmash-agents';
   const root = `/repos/${repository}`;
   const assertCurrent = async () => {
     const [latest, head] = await Promise.all([
-      api<{ tag_name: string; draft: boolean; prerelease: boolean; published_at: string | null }>(root + '/releases/latest'),
+      latestAgentRelease(api, root),
       api<{ sha: string }>(root + '/commits/main')
     ]);
     if (latest.tag_name !== previous || latest.draft || latest.prerelease || !latest.published_at || head.sha !== candidate) throw new Error('Release baseline or main candidate changed; prepare again');

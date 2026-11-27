@@ -5,12 +5,18 @@ Keep feature pull requests targeting `main`. Required CI and review remain the s
 1. Review all changes accumulated since the last deployed version. Decide the next stable SemVer tag (for example, `v0.2.0` or `v0.2.1`).
 2. Prepare release notes from merged pull requests. Use GitHub's generated release notes as a starting point and the Oddmash Release advisor for draft wording, verification and compatibility notes. The Release advisor does not publish or deploy.
 3. Publish the GitHub Release manually as the authorized maintainer, targeting the reviewed `main` commit. Use a stable `vMAJOR.MINOR.PATCH` tag. The tag, not the moving branch, identifies the deployed version.
-4. The deployment workflow validates the latest published stable release and exact tag commit, then checks that the commit belongs to `main` history. It reuses completed full type checks and tests from a successful `main` CI run on the exact release commit when the run records that revision. Otherwise it runs both checks in the deployment workflow. The workflow stages the Vercel production build, smoke-tests it and promotes only the tested build. The production environment and deployment enable switch still apply.
-5. Inspect the workflow summary for the tag, commit and Vercel deployment. If the release failed, the previous production deployment remains assigned. If a newer release has already been published, the old release cannot be redeployed or promoted by this workflow.
+4. The deployment workflow selects the highest published stable Agent SemVer release (the `vMAJOR.MINOR.PATCH` channel) independently of catalog releases and validates its exact tag commit, then checks that the commit belongs to `main` history. It reuses completed full type checks and tests from a successful `main` CI run on the exact release commit when the run records that revision. Otherwise it runs both checks in the deployment workflow. The workflow stages the Vercel production build, smoke-tests it and promotes only the tested build. The production environment and deployment enable switch still apply.
+5. Inspect the workflow summary for the tag, commit and Vercel deployment. If the release failed, the previous production deployment remains assigned. If a higher stable Agent version has already been published, the old release cannot be redeployed or promoted by this workflow.
 
 For an urgent fix, merge the reviewed patch and publish the next patch release immediately. To retry the latest release if tag-triggered execution is unavailable under the existing production environment rules, run the deployment workflow manually from `main` with the exact published release tag. Never bypass the environment or publish a tag from an unreviewed branch. Leave rollback to the existing authorized Vercel rollback process.
 
 Choose a release cadence based on completed work, not on every commit. Do not publish a new version for documentation or test-only changes unless those changes are part of a user-visible release.
+
+## Unified repository migration
+
+The `skills-vMAJOR.MINOR.PATCH` channel is independent. Catalog versions, drafts and prereleases do not participate in Agent release selection. The selector enumerates up to ten pages of published release metadata and fails closed if the collection cannot be completely verified. The highest supported stable Agent SemVer is selected numerically, not by repository-wide latest metadata.
+
+Imported historical agent tags remain unchanged; GitHub Release objects remain in the original repository. Establish the first new Agent release from a reviewed main candidate using the actual last deployed legacy revision as the comparison baseline and document its verification manually. The existing production repository and authorization guards remain unchanged until the reviewed cutover. Do not publish new Agent releases from the unified target before that cutover is approved.
 
 ## Release note format
 

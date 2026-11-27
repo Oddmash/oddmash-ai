@@ -30,7 +30,7 @@ test('preparation verifies current main CI, filters metadata and rejects stale c
   let current = head;
   let result = 'success';
   const api = async <T>(path: string): Promise<T> => {
-    if (path.endsWith('/releases/latest')) return { tag_name: previous, draft: false, prerelease: false, published_at: '2026-11-24' } as T;
+    if (path.endsWith('/releases?per_page=100&page=1')) return [{ tag_name: 'skills-v99.0.0', draft: false, prerelease: false, published_at: '2026-11-27' }, { tag_name: previous, draft: false, prerelease: false, published_at: '2026-11-24' }] as T;
     if (path.endsWith('/commits/main')) return { sha: current } as T;
     if (path.includes('/actions/workflows/')) return { workflow_runs: [{ head_sha: head, event: 'push', status: 'completed', conclusion: result }] } as T;
     if (path.endsWith('/commits/' + previous)) return { sha: base } as T;
@@ -73,7 +73,7 @@ test('model report is bounded, structured and stored only as advisory', async ()
 
 test('truncated commit or file coverage requires QA and is reported as partial', async () => {
   const api = async <T>(path: string): Promise<T> => {
-    if (path.endsWith('/releases/latest')) return { tag_name: previous, draft: false, prerelease: false, published_at: '2026-11-24' } as T;
+    if (path.endsWith('/releases?per_page=100&page=1')) return [{ tag_name: 'skills-v99.0.0', draft: false, prerelease: false, published_at: '2026-11-27' }, { tag_name: previous, draft: false, prerelease: false, published_at: '2026-11-24' }] as T;
     if (path.endsWith('/commits/main')) return { sha: head } as T;
     if (path.includes('/actions/workflows/')) return { workflow_runs: [{ head_sha: head, event: 'push', status: 'completed', conclusion: 'success' }] } as T;
     if (path.endsWith('/commits/' + previous)) return { sha: base } as T;
