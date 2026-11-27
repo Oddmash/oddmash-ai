@@ -29,6 +29,7 @@ Use the role map in [README.md](README.md). Load the primary decision owner, the
 
 - This repository is the source of truth for reusable skills. Do not move agent runtime code, credentials, deployment policy, or product-specific authority here.
 - Agent maintainers consume skills by exact path at a reviewed immutable commit, with independent upgrade and rollback decisions. Preserve stable skill names and paths or document migrations.
+- Keep implementation lessons in the skill that owns the decision. Link the public product evidence in the change record, and leave product selectors, spacing values, article catalogs, and release commands in the product repository. Record what was observed in automation, the browser, or production.
 - Changes to a skill's activation, expected evidence, or compatibility must describe the impact on consumers. A skill cannot grant access, approve a deployment, or override the organization agreements or target repository contracts.
 
 ## Agent contribution attribution

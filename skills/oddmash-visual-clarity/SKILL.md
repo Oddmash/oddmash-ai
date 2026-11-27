@@ -8,6 +8,7 @@ description: Evaluate and improve visual hierarchy, legibility, readability and 
 Inspect the rendered interface at representative desktop and narrow widths. Identify the primary task and what must be noticed first. Assess the result independently of the implementation and functional CI. A correct feature may still have an unclear, cluttered, or visually inappropriate design.
 
 - Establish hierarchy through spacing, size, weight and contrast. Avoid competing accents, excessive bold text, decorative cards and repeated headings. Use product tokens and real content in the supported locales.
+- In reading indexes and editorial landings, use closer spacing within a title, its description and its related content than between independent groups. Inspect wrapped headings and descriptions on both sides of column breakpoints. Align corresponding list starts only when neighboring columns are meant to be scanned together. In a single column preserve each natural group height. Compare the rendered relationships as well as measured gaps.
 - Preserve legibility under wrapping, zoom and localization. Check density, alignment and clipping. Keep essential information available without hover or motion.
 - Distinguish actions, selection, error and success visibly without relying on color alone.
 - Use intentional motion to demonstrate real changes; keep content legible and provide pause, reduced-motion and offscreen behavior.
