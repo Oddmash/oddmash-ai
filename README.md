@@ -3,7 +3,7 @@
 Oddmash AI brings the reusable Skills catalog and the Agents runtime into one source repository. The catalog is independently installable, and the existing agent operating and release boundaries remain unchanged during migration.
 
 - [Skills catalog](catalog/README.md) and [installation guide](catalog/CONTRIBUTING.md)
-- [Migration status](docs/unified-source-migration.md)
+- [Migration status](docs/unified-source-migration.md) and [cutover checklist](docs/unified-cutover-checklist.md)
 
 ## Oddmash Agents
 
@@ -98,4 +98,4 @@ See [review quality](docs/review-quality.md), [evaluation baseline](docs/evaluat
 
 ## Shared guidance
 
-[Oddmash Skills](https://github.com/Oddmash/oddmash-skills) owns reusable work methods. This repository owns executable agents and operational controls. See the [skill integration contract](docs/skill-integration.md) for the approved reference, upgrade procedure, and boundaries.
+The [Skills catalog](catalog/README.md) owns reusable work methods. The agent workspace owns executable agents and operational controls. See the [skill integration contract](docs/skill-integration.md) for the approved reference, upgrade procedure, and boundaries.
