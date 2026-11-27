@@ -51,6 +51,6 @@ test('enumerates pages and fails closed on incomplete or repeated metadata', asy
   const paged = async <T>(path: string): Promise<T> => (path.endsWith('page=1') ? catalog : [release]) as T;
   assert.equal((await latestAgentRelease(paged, '/repos/Oddmash/oddmash-ai')).tag_name, tag);
   await assert.rejects(latestAgentRelease(async <T>() => catalog as T, '/repos/Oddmash/oddmash-ai'), /changed/);
-  await assert.rejects(latestAgentRelease(async <T>(path: string) => Array.from({ length: 100 }, (_, i) => ({ ...release, tag_name: 'skills-v' + path.split('page=')[1] + '.0.' + i })) as T, '/repos/Oddmash/oddmash-ai'), /incomplete/);
+  await assert.rejects(latestAgentRelease(async <T>(path: string) => Array.from({ length: 100 }, (_, i) => ({ ...release, tag_name: 'skills-v' + new URL('https://example.invalid' + path).searchParams.get('page') + '.0.' + i })) as T, '/repos/Oddmash/oddmash-ai'), /incomplete/);
   await assert.rejects(latestAgentRelease(async <T>() => [{ ...release, tag_name: 'skills-v1.0.0' }] as T, '/repos/Oddmash/oddmash-ai'), /No published stable Agent release/);
 });
