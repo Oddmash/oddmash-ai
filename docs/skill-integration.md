@@ -1,10 +1,10 @@
 # Shared skill integration
 
-The organization [working agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md) and [AI review policy](https://github.com/Oddmash/.github/blob/main/docs/AI-CODE-REVIEW.md) define the operational boundaries. The [skills catalog](https://github.com/Oddmash/oddmash-skills) defines reusable methods. Product repositories define their own contracts and verification commands.
+The organization [working agreements](https://github.com/Oddmash/.github/blob/main/AGENTS.md) and [AI review policy](https://github.com/Oddmash/.github/blob/main/docs/AI-CODE-REVIEW.md) define the operational boundaries. The [skills catalog](../catalog/README.md) defines reusable methods. Product repositories define their own contracts and verification commands.
 
 ## Runtime sources
 
-Each assessment uses the compact runtime advisory section of an Oddmash skill. The deployed bundle records one full catalog commit SHA and the exact `SKILL.md` path for each role. The service reads the bundled text locally. It does not fetch the catalog during a review or load the hands-on procedures and references intended for interactive coding agents.
+Each assessment uses the compact runtime advisory section of an Oddmash skill. The deployed bundle records one full unified repository commit SHA and the exact `catalog/skills/.../SKILL.md` path for each role. The service reads the bundled text locally. It does not fetch the catalog during a review or load the hands-on procedures and references intended for interactive coding agents.
 
 | Role | Shared skill |
 | --- | --- |
@@ -21,15 +21,17 @@ Lead also reads the organization agreements and review policy. For PR work, each
 ## Upgrade procedure
 
 1. Review the changes to the relevant runtime advisory sections in the catalog. Fix shared guidance in the catalog first so all consumers can reference the same decision criteria.
-2. Regenerate the bundle from the exact approved catalog commit.
+2. Set `revision` in `scripts/agent-skill-source.json` to the exact approved unified commit. The commit must be an ancestor of the checked-out revision. Use a full Git history checkout and regenerate the bundle.
 
    ```sh
-   node scripts/bundle-agent-skills.mjs ../oddmash-skills <catalog-commit-sha>
-   node scripts/bundle-agent-skills.mjs ../oddmash-skills <catalog-commit-sha> --check
+   node scripts/bundle-agent-skills.mjs
+   node scripts/bundle-agent-skills.mjs --check
    ```
 
-3. Review the generated diff and run the offline tests and type check. Open a ready-for-review PR recording the source revision, affected roles, compatibility and evidence. Deploy only through the existing release process.
-4. Roll back by reverting the bundle update and releasing the reviewed rollback, or rolling back the production deployment through the approved process.
+3. Run `node --test scripts/agent-skill-guidance.test.mjs` then review the generated diff and run the offline tests and type check. Open a ready-for-review PR recording the source revision, affected roles, compatibility and evidence. Deploy only through the existing release process.
+4. Roll back by reverting the source manifest and bundle update and releasing the reviewed rollback, or rolling back the production deployment through the approved process.
+
+Catalog edits and installation do not automatically change the runtime. A reviewed manifest update and a separately authorized agent release are required. The generator reads Git objects, not mutable working-tree files, and the catalog runtime check compares the committed bundle byte for byte.
 
 ## Authority and failure handling
 
