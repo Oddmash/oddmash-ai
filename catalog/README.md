@@ -43,7 +43,7 @@ Product-specific commands, contracts, and deployment policies stay with the prod
 
 Use [routing evaluation scenarios](docs/skill-evaluation.md) to test skill selection and output quality without treating structural validation as model evaluation.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for installation and maintenance.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for installation and maintenance, and [independent distribution](DISTRIBUTION.md) for versioned catalog archives.
 
 ## Integration
 
