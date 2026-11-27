@@ -1,0 +1,50 @@
+---
+name: oddmash-quality-assurance
+description: Plan and execute Oddmash QA, smoke, regression, exploratory, functional, visual, accessibility, performance and compatibility tests; triage defects, verify fixes and recommend release readiness.
+---
+
+# Oddmash quality assurance
+
+Read the requirements, repository test commands, current behavior, and affected contracts. Define the expected result before running checks.
+
+## QA workflow
+
+1. Read [execution playbook](references/execution.md) and [reporting and release gates](references/reporting.md). Establish exact candidate, authorized scope, applicable environments, acceptance criteria and risk-based case matrix.
+2. Run relevant existing tests and hands-on checks; verify behavior in the actual runtime when possible. Use synthetic fixtures and nonproduction environments. Record actual results instead of merely proposing a checklist.
+3. Triage findings by severity and user impact. In QA-only work, return evidence without modifying implementation; with explicit fix scope, add regression coverage and retest affected behavior.
+4. Report pass, fail, blocked, not applicable with reason, and not run separately. Keep exact-revision evidence, unverified required cases and unresolved risks visible. Recommend ready or not ready; do not grant merge or deployment authority.
+5. When specialist review or real-world verification is essential but unavailable, escalate rather than claiming coverage. Use [release management](../oddmash-release-management/SKILL.md) for the final candidate and authority boundaries.
+6. For an existing PR, reconcile every outstanding review finding against current evidence. When authorized to fix, add a targeted regression test, rerun relevant checks, and post the result once in the original discussion using [scoped review collaboration](../oddmash-code-review-collaboration/SKILL.md). Distinguish corrected, unsupported by the product contract, unresolved, and awaiting required reviewer confirmation. If verified evidence settles a finding and a maintainer authorizes resolution, record the rationale without automatically requesting another review. Preserve mandatory review gates.
+
+## Verification criteria
+
+- Build a risk-based test matrix covering the changed behavior, relevant boundary values, failure and recovery, and existing behavior that must remain stable. Prefer meaningful assertions over snapshots or test counts.
+- For changed landing, documentation, and operational dashboard surfaces, use [visual clarity](../oddmash-visual-clarity/SKILL.md) as the independent rendered design review owner. Apply product intent, [brand direction](../oddmash-brand-design/references/product-website-direction.md) and [developer documentation](../oddmash-developer-documentation/SKILL.md) where relevant. Record actual screenshots, content/links, first-use journey and remaining design defects separately from functional checks.
+- For supported-language typography changes, execute the [Juliya adoption matrix](../oddmash-internationalization/references/korean-typography.md); record reproducible failures and distinguish consumer bugs from library defects. For public developer docs, verify requirements, examples and rendered reference through developer documentation, and execute [agent-readable docs acceptance](../oddmash-discoverability/references/agent-readable-docs.md) for generated artifacts.
+- For user-facing changes, verify real interaction under representative conditions: keyboard, focus, narrow layouts, long labels, relevant themes, reduced motion, and actual browser or device behavior. Choose browser coverage based on the affected platform.
+- For affected web controls, verify the implementation uses its recorded compatible shared component or justified exception from [web delivery](../oddmash-web-delivery/SKILL.md), including interactive examples and demos. Check the actual source or integration as well as rendered interaction, keyboard and focus states, responsive layout and applicable native fallback. Report unadopted equivalents and missing shared capabilities separately from visual preferences.
+- For performance, use the same fixtures, environment, measurement definition, and repeated runs when comparing alternatives. Report variance and distinguish measured results from estimates.
+- Add focused regression coverage for confirmed defects when implementation is authorized. Keep fixtures synthetic, deterministic, and free of private data; avoid external side effects and offensive testing.
+- Record tested revision, commands, conditions, results, reproducible observations, and unverified cases. A passing local test is not evidence of remote CI or deployment success. Separate environment blockers from failed assertions.
+
+Use product-specific verification playbooks when applicable; they supplement rather than replace these criteria.
+
+## Product readiness evidence
+
+For the changed scope, record pass/fail/not applicable (with reason)/not verified, exact revision and evidence. Include:
+- State matrix: initial/refresh loading, skeleton layout stability, empty/filtered-empty, partial, timeout, offline, permission/session errors, retry, duplicate submissions, race/cancellation and success; verify retained data/input and focus.
+- UI matrix: narrow/wide, real long localized content, themes, text resize, keyboard/touch, dialogs, scrolling/overflows, reduced motion and manual accessibility against [WCAG criteria](../oddmash-accessibility/SKILL.md). Use deterministic network mocks for adverse conditions and real browser tests for rendering.
+- Data/policy matrix: permitted collection and refusal/withdrawal, redacted logs, authorization invariants, retention/deletion flows with synthetic data, accessible accurate policy links and documented asset rights. Refer to [privacy](../oddmash-security-privacy/SKILL.md) and [licensing](../oddmash-copyright-licensing/SKILL.md).
+- Delivery matrix: lint/types/tests/build, representative browser coverage, performance budgets and actual measurements (LCP, INP, CLS where meaningful), compatibility, error monitoring and recovery. Never fabricate device or production results.
+- Classify blockers by user harm, data exposure, legal uncertainty, core flow failure, accessibility barriers and regressions. Keep unresolved material blockers visible to the maintainer; do not treat incomplete checks as passed.
+
+- Extend the matrix from the product's applicability checklist. Verify share revocation, embed fallback, page discovery/privacy, locale switching and regional formatting, saved-draft recovery, authentication/session transitions, billing sandbox state changes, and artifact/operational recovery where required. Use the relevant specialist skill for detailed criteria; do not demand irrelevant coverage.
+
+- Require separate functional and rendered design results for visual changes. Test observable outcomes rather than incidental UI shape or implementation classes. If an authorized redesign removes an unnecessary control or changes presentation, revise outdated assertions and replace them with equivalent outcome, accessibility and contract coverage; do not weaken required behavior. Use the visual review owner to identify and retest concrete defects. Green CI and generated screenshots alone do not establish visual acceptance.
+
+## Runtime advisory guidance
+
+- Identify regression risks tied to the changed behavior, including relevant boundaries, failure recovery, or behavior that must remain stable. Recommend the smallest check that would confirm the expected result.
+- Report supplied checks as observed evidence and proposed checks as follow-up. State what the available evidence leaves unverified. Limit the assessment to the affected scope.
+
+For dashboard changes, use [dashboard design](../oddmash-dashboard-design/SKILL.md) to define the operator task and state contract before implementation. Require separately recorded rendered acceptance; treat missing render evidence as not verified.

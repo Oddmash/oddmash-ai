@@ -1,0 +1,19 @@
+---
+name: oddmash-motion-content-transition
+description: Design and implement timed or user-triggered content rotation, auto-changing text, carousels, scene switches and crossfades without losing reading or control.
+---
+
+# Content transition
+
+Use [motion design](../oddmash-motion-design/SKILL.md) for the product outcome and [motion implementation](../oddmash-motion-implementation/SKILL.md) for state and geometry. For instructional media composition and production, use [visual media](../oddmash-visual-media/SKILL.md).
+
+- Define the ordered scenes, the stable committed content, the automatic trigger, dwell, exit condition and manual-selection policy before implementing. Choose finite or continuous sequencing according to the product goal. For supplementary examples prefer a finite sequence unless repetition communicates meaningful behavior or is explicitly requested.
+- Make each scene visibly distinct and real. Change the committed state once; animate only its presentation. Keep a stable reserved region and avoid overlapping accessible text or cloning the same content for an illusion.
+- For scroll-led project or editorial chapters, retain normal document flow and native wheel, trackpad, keyboard and touch input; do not intercept wheel events or stack competing animations on each gesture. Use natural proximity snapping where scene alignment helps, or one-scene-at-a-time snapping only when explicitly appropriate and chapters fit the available viewport. Let oversized chapters, narrow or zoomed layouts and reduced-motion users scroll freely. Preserve anchors, history restoration, focus and access to non-chapter content. Use gentle, interruptible visual transitions rather than hiding content until a scene settles. Verify first, intermediate and final chapters with real wheel and trackpad-like input, both directions, hash navigation and keyboard traversal.
+- For an editorial text swap, use a short opacity/position reveal, 160 to 320 ms, optionally stagger word or line visuals by 25 to 45 ms. Keep overall reading dwell separate, usually 3 to 6 seconds for short copy. Let users inspect long or interactive content without a timer.
+- In repeated auto-updating interfaces provide an accessible stop or pause mechanism appropriate to the product and [accessibility](../oddmash-accessibility/SKILL.md). Pause when offscreen, hovered or focused, stop/resume according to the documented manual-selection behavior, cancel timers on disposal and respect reduced motion. Choose the smallest discoverable, keyboard-operable stop or pause mechanism; use existing controls only if they already serve the visitor and clearly interrupt the sequence. Do not add example selectors just to satisfy an animation pattern.
+- For a user-facing pause/resume sequence, resume the same scene at its remaining time and visual position unless a deliberate restart is specified. Keep a readable initial result while scripts initialize or are disabled, and expose playback controls once they can respond. Exercise the first input on a delayed load as well as the regular loop.
+- If showing a time indicator, derive it from the same dwell schedule; reset it on scene change and stop it on pause. Do not misrepresent loading or user progress.
+- Test first and last scenes, keyboard selection, rapid switching, pause and offscreen behavior, timer cleanup, narrow layouts and no-motion equivalence. Capture a real transition and verify what changes and what stays stable.
+
+- Default to no counter, progress bar, playback status or descriptive motion caption for supplementary rotating examples. Retain visible indicators only when they materially help the task or provide necessary control. Use a selected example as a state cue only when selection is a genuine user task. Preserve accessible interruption and reduced-motion behavior without exposing implementation telemetry.

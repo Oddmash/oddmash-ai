@@ -90,8 +90,23 @@ jobs:
         if: steps.prior.outputs.run == ''
         run: test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
 
+  catalog:
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: catalog
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - run: python3 scripts/install.py --validate
+      - run: python3 -m unittest discover -s tests
+
   verify:
-    needs: [scope, test]
+    needs: [scope, test, catalog]
     if: always()
     runs-on: ubuntu-slim
     timeout-minutes: 5
@@ -99,9 +114,11 @@ jobs:
       - name: Confirm appropriate checks passed
         env:
           SCOPE_RESULT: ${{ needs.scope.result }}
+          CATALOG_RESULT: ${{ needs.catalog.result }}
           RUN_0: ${{ needs.scope.outputs.runtime }}
           RESULT_0: ${{ needs.test.result }}
         run: |
           test "$SCOPE_RESULT" = success
+          test "$CATALOG_RESULT" = success
           verify() { case "$1:$2" in true:success|false:skipped) return 0 ;; *) return 1 ;; esac; }
           verify "$RUN_0" "$RESULT_0"

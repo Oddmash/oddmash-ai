@@ -1,0 +1,19 @@
+---
+name: oddmash-motion-implementation
+description: Implement and test Oddmash web motion with repeatable state transitions, measurement-safe rendering, keyboard input, and a reduced-motion path.
+---
+
+# Oddmash motion implementation
+
+Identify the committed state, the measured geometry, and the decoration representing it. If the intended effect is still open, use the [motion design skill](../oddmash-motion-design/SKILL.md).
+
+- Prefer explicit CSS transition properties and the owning product's timing tokens. When an animated property would distort measurement or hit targets, use a transform on a separate decorative layer.
+- Compute the target from the newest input. Keep state transitions and focus independent of finish events. Cancel scheduled work when its owner is disposed. Leave first-render markup identical under both motion preferences.
+- For width or resize gestures, clamp the marker to the actual available space. The content should update without waiting for decoration. Repeated requests should settle at the last target.
+- For a comparison replay, derive the movement vector from actual rendered positions under equal constraints. Prefer animation of the real visual content in a stable container when readable; use an accessibility-hidden non-interactive decoration only when it communicates the effect better. Expose one coherent accessible content state per displayed result. Cancel or retarget on new input or a geometry change. Do not animate a CSS width that drives the measurement itself.
+- If repeated motion is the product proof, provide an appropriate keyboard-operable pause or stop mechanism, pause off-screen, and keep a static reduced-motion result. When several measured words move together, use [layout transitions](../oddmash-motion-layout-transition/SKILL.md) for stable boxes and real geometry; avoid duplicate text or distorted measurement.
+- In a browser, test that motion starts when expected, the final geometry matches the committed state, and keyboard input keeps working during interruption. Run a separate reduced-motion case and assert equivalent state and focus without decorative travel.
+
+- For loading and state transitions, reserve layout space, cancel animations on completion/error or unmount, respect reduced motion and avoid animating focus or actionable hit targets. Test rapid retries, stale responses and layout changes without flicker or lost interaction.
+
+Use the specialist routing in [motion design](../oddmash-motion-design/SKILL.md) before implementing a specific entrance, content transition, layout effect, microinteraction or feedback sequence. Verify the actual rendered movement and settled state, not just a passing build.

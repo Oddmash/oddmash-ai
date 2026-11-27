@@ -1,0 +1,220 @@
+[
+  {
+    "id": "library-landing",
+    "prompt": "Redesign a developer library landing so a first-time user can install it and see real behavior.",
+    "primary": [
+      "oddmash-product-planning",
+      "oddmash-ux-design",
+      "oddmash-brand-design"
+    ],
+    "support": [
+      "oddmash-developer-documentation",
+      "oddmash-web-delivery",
+      "oddmash-visual-clarity",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Show real product input/output and one useful action before decorative content.",
+      "Compare two composition directions; consult Oddmash Website and Juliya without forcing their theme.",
+      "Review desktop and mobile renders and report observed defects."
+    ],
+    "avoid": [
+      "Fabricated dashboards or invented benchmark claims.",
+      "Automatic inclusion of every motion pattern."
+    ]
+  },
+  {
+    "id": "shared-ui-adoption",
+    "prompt": "A documentation demo uses local Select and Slider controls even though the current released Oddmash UI has compatible controls. Its comparison panel also intentionally demonstrates native browser input. Improve consistency without changing the demonstration or product brand.",
+    "primary": [
+      "oddmash-web-delivery"
+    ],
+    "support": [
+      "oddmash-quality-assurance",
+      "oddmash-accessibility",
+      "oddmash-brand-design"
+    ],
+    "expected": [
+      "Inspect the consumer's released public exports, use the compatible shared controls for the surrounding UI, and retain the intentional native comparison.",
+      "Record exceptions and check actual implementation, focus, keyboard, responsive rendering and fallback behavior."
+    ],
+    "avoid": [
+      "Local duplicate controls that merely resemble the shared design, an invented native-component exception or a forced unreleased dependency.",
+      "A uniform product theme or a change to the native behavior under demonstration."
+    ]
+  },
+  {
+    "id": "peer-resource-card-navigation",
+    "prompt": "Two resource cards have different description lengths and mismatched link alignment. Some GitHub icons have tiny hit areas and one resource has no published registry package. Improve navigation without removing local documentation or making separate links conflict with the card destination.",
+    "primary": [
+      "oddmash-ux-design"
+    ],
+    "support": [
+      "oddmash-accessibility",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Keep a meaningful native primary link and distinct utility destinations; align equivalent action groups and prefer comfortable standalone icon targets.",
+      "Verify real links, click routing, keyboard focus and narrow and wide layouts with unequal localized copy."
+    ],
+    "avoid": [
+      "Nested links, whole-container click handlers, fabricated registry links or overlapping hit areas.",
+      "Fixed-height cards that clip longer descriptions or a bottom-right action rule applied to unrelated card types."
+    ]
+  },
+  {
+    "id": "juliya-proof",
+    "prompt": "The native and enhanced text have equal line breaks, but the demo says wrapping improved; animation follows scrolling.",
+    "primary": [
+      "kowrap-landing",
+      "oddmash-motion-content-transition"
+    ],
+    "support": [
+      "oddmash-internationalization",
+      "oddmash-motion-layout-transition",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Compare measured actual layouts and show no advantage when equal.",
+      "Keep normal scroll, pause offscreen and honor reduced motion."
+    ],
+    "avoid": [
+      "Fake differences or hardcoded word positions.",
+      "Unrequested global sticky animation."
+    ]
+  },
+  {
+    "id": "game-landing",
+    "prompt": "Create a landing page for a cooperative game with a verified gameplay capture.",
+    "primary": [
+      "oddmash-product-planning",
+      "oddmash-ux-design",
+      "oddmash-brand-design"
+    ],
+    "support": [
+      "oddmash-web-delivery",
+      "oddmash-visual-clarity"
+    ],
+    "expected": [
+      "Show actual gameplay and core loop; choose the game's own identity.",
+      "Make play/download and platform requirements clear."
+    ],
+    "avoid": [
+      "Copying Juliya's palette or forcing API docs."
+    ]
+  },
+  {
+    "id": "small-doc-fix",
+    "prompt": "Correct one incorrect API option in the developer docs.",
+    "primary": [
+      "oddmash-developer-documentation"
+    ],
+    "support": [
+      "oddmash-quality-assurance",
+      "oddmash-git-workflow"
+    ],
+    "expected": [
+      "Verify current public API contract and corrected example.",
+      "Keep change scoped."
+    ],
+    "avoid": [
+      "Redesigning the landing or loading unrelated design skills."
+    ]
+  },
+  {
+    "id": "release-external",
+    "prompt": "Prepare notes for a release with one verified external contributor, maintainer commits and agent reviews.",
+    "primary": [
+      "oddmash-release-management"
+    ],
+    "support": [
+      "oddmash-git-workflow"
+    ],
+    "expected": [
+      "Use actual included changes and final external-only acknowledgment.",
+      "Keep publishing separate from advice."
+    ],
+    "avoid": [
+      "Bot or maintainer avatars, invented identities, or unauthorized publication."
+    ]
+  },
+  {
+    "id": "legacy-adoption",
+    "prompt": "Fix wrapping on a consumer pinned to a working legacy Kowrap package.",
+    "primary": [
+      "oddmash-internationalization",
+      "oddmash-web-delivery"
+    ],
+    "support": [
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Verify current dependency/API and real rendering before suggesting migration.",
+      "Use Juliya for new compatible adoption; preserve legacy deployment until authorized migration."
+    ],
+    "avoid": [
+      "Blind package rename or hardcoded breaks."
+    ]
+  },
+  {
+    "id": "product-logo",
+    "prompt": "Create a logo for a new architecture library with a distinct product identity, taking inspiration from Boundra and Juliya.",
+    "primary": [
+      "oddmash-logo-design"
+    ],
+    "support": [
+      "oddmash-brand-design",
+      "oddmash-copyright-licensing",
+      "oddmash-visual-clarity"
+    ],
+    "expected": [
+      "Compare distinct silhouettes grounded in product behavior.",
+      "Validate editable vector and monochrome, favicon scale and light/dark placement."
+    ],
+    "avoid": [
+      "Copying an existing mark or using generic symbols and illegible detail."
+    ]
+  },
+  {
+    "id": "cinematic-hero",
+    "prompt": "A static two-state developer tool landing feels weak. Create an immersive automatic hero showing multiple real outcomes like Juliya and Oddmash.",
+    "primary": [
+      "oddmash-brand-design",
+      "oddmash-motion-design"
+    ],
+    "support": [
+      "oddmash-motion-content-transition",
+      "oddmash-motion-implementation",
+      "oddmash-accessibility",
+      "oddmash-visual-clarity"
+    ],
+    "expected": [
+      "Choose meaningful scenes with real inputs and consequences, stable CTA and readable dwell.",
+      "Provide pause, reduced-motion static alternative and offscreen suspension; verify actual states."
+    ],
+    "avoid": [
+      "Generic looping particles, scroll hijacking or fabricated product results."
+    ]
+  },
+  {
+    "id": "operator-dashboard",
+    "prompt": "Redesign an agent operations dashboard where the fixed canvas is tiny, tools clutter the view, and failed attempts are difficult to find.",
+    "primary": [
+      "oddmash-dashboard-design"
+    ],
+    "support": [
+      "oddmash-ux-design",
+      "oddmash-visual-clarity",
+      "oddmash-quality-assurance"
+    ],
+    "expected": [
+      "Compare a responsive observed-role layout with the current fixed canvas.",
+      "Expose failed attempts and recorded timing, preserve unknown and publication semantics.",
+      "Verify representative rendered desktop/mobile, light/dark and localized states separately from CI."
+    ],
+    "avoid": [
+      "Invented overall progress or causal execution sequence.",
+      "A passing build presented as visual acceptance."
+    ]
+  }
+]
