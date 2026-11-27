@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { latestAgentRelease, validateRelease } from '../apps/worker/src/release-policy.ts';
 
 const commit = 'a'.repeat(40), tag = 'v0.2.0';
-const selection = { repository: 'Oddmash/oddmash-agents', actorId: '135234546', event: 'release', ref: `refs/tags/${tag}`, eventSha: commit, tag };
+const selection = { repository: 'Oddmash/oddmash-ai', repositoryId: '1474100040', actorId: '135234546', event: 'release', ref: `refs/tags/${tag}`, eventSha: commit, tag };
 const release = { tag_name: tag, draft: false, prerelease: false, published_at: '2026-11-24T00:00:00Z' };
 const fixture = (overrides: { release?: object; sha?: string; comparison?: object } = {}) => async <T>(path: string): Promise<T> => {
   if (path.endsWith('/releases?per_page=100&page=1')) return [{ ...release, ...overrides.release }] as T;
@@ -18,9 +18,16 @@ test('resolves the latest published authorized stable tag in main history', asyn
 });
 
 test('rejects other actors, repositories, branch dispatches and unstable tags', async () => {
-  for (const invalid of [{ actorId: '7' }, { repository: 'Oddmash/example' }, { tag: 'v0.2.0-beta.1' }, { tag: 'skills-v0.2.0' }, { event: 'push' }, { event: 'workflow_dispatch', ref: 'refs/heads/develop' }]) {
+  for (const invalid of [{ actorId: '7' }, { repository: 'Oddmash/example' }, { repository: 'Oddmash/oddmash-agents' }, { repositoryId: '1468182609' }, { repositoryId: '' }, { tag: 'v0.2.0-beta.1' }, { tag: 'skills-v0.2.0' }, { event: 'push' }, { event: 'workflow_dispatch', ref: 'refs/heads/develop' }]) {
     await assert.rejects(validateRelease({ ...selection, ...invalid }, fixture()));
   }
+});
+
+test('requires an exact reviewed main commit for manual dispatch', async () => {
+  const dispatch = { ...selection, event: 'workflow_dispatch', ref: 'refs/heads/main' };
+  await assert.rejects(validateRelease(dispatch, fixture()), /exact reviewed main commit/);
+  await assert.rejects(validateRelease({ ...dispatch, expectedCommit: 'b'.repeat(40) }, fixture()), /exact reviewed main commit/);
+  await assert.rejects(validateRelease({ ...dispatch, eventSha: 'b'.repeat(40), expectedCommit: commit }, fixture()), /exact reviewed main commit/);
 });
 
 test('fails closed when the latest release, tag commit or ancestry changes', async () => {

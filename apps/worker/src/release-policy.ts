@@ -2,7 +2,7 @@ type Api = <T>(path: string) => Promise<T>;
 type Release = { tag_name: string; draft: boolean; prerelease: boolean; published_at: string | null };
 type Commit = { sha: string };
 type Comparison = { status: string; behind_by: number; merge_base_commit?: { sha: string } };
-type Selection = { repository: string; actorId: string; event: string; ref: string; eventSha: string; tag: string; expectedCommit?: string };
+type Selection = { repository: string; repositoryId: string; actorId: string; event: string; ref: string; eventSha: string; tag: string; expectedCommit?: string };
 
 export const stableAgentTag = /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$/;
 const commitSha = /^[a-f0-9]{40}$/;
@@ -37,10 +37,11 @@ export async function latestAgentRelease(api: Api, root: string): Promise<Releas
 }
 
 export async function validateRelease(selection: Selection, api: Api): Promise<{ tag: string; commit: string }> {
-  const { repository, actorId, event, ref, eventSha, tag, expectedCommit } = selection;
-  if (repository !== 'Oddmash/oddmash-agents' || actorId !== '135234546') throw new Error('Unauthorized release repository or actor');
+  const { repository, repositoryId, actorId, event, ref, eventSha, tag, expectedCommit } = selection;
+  if (repository !== 'Oddmash/oddmash-ai' || repositoryId !== '1474100040' || actorId !== '135234546') throw new Error('Unauthorized release repository or actor');
   if (tag.length > 64 || !stableAgentTag.test(tag)) throw new Error('Only stable vMAJOR.MINOR.PATCH release tags are supported');
   if (event === 'release' ? ref !== `refs/tags/${tag}` || !commitSha.test(eventSha) : event !== 'workflow_dispatch' || ref !== 'refs/heads/main') throw new Error('Release event or dispatch reference is ineligible');
+  if (event === 'workflow_dispatch' && (!expectedCommit || !commitSha.test(expectedCommit) || expectedCommit !== eventSha)) throw new Error('Dispatch requires the exact reviewed main commit');
   const root = '/repos/' + repository;
   const release = await latestAgentRelease(api, root);
   if (!release || release.tag_name !== tag || release.draft !== false || release.prerelease !== false || !release.published_at) throw new Error('Only the highest published stable Agent release can be deployed');
