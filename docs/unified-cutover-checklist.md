@@ -1,6 +1,6 @@
 # Unified source cutover checklist
 
-Status: source integration established on a review branch. No production target, application permission, legacy issue or PR has been changed.
+Status: source integration is merged and verified on main. The deployment transition remains disabled. No production target, application permission, legacy issue or PR has been changed.
 
 ## Repository identities and historical source
 
@@ -38,6 +38,20 @@ Move open issues only after checking claims and contributor involvement; retain 
 Read-only Vercel and GitHub inspection on 2026-11-27 KST identified the existing project `oddmash-reviewer` (Node.js 24.x). Its latest production deployment is READY and matches legacy release [v0.28.1](https://github.com/Oddmash/oddmash-agents/releases/tag/v0.28.1), commit `daab492992fc442b7bc7a423546d9b9d8678f0a7`. The recorded [promotion workflow](https://github.com/Oddmash/oddmash-agents/actions/runs/45842806180) identifies the verified deployment. The project has no Git-linked repository in its metadata, so the existing release-driven CI remains the deployment source; do not enable automatic Git deployments during the migration.
 
 Recheck this baseline and the actual active deployment immediately before any staged promotion. Production credentials and owner session settings were not inspected or modified.
+
+## Unified deployment transition
+
+The first replacement release uses the same Vercel project and existing production configuration. The unified workflow is manual-only during qualification; it does not synchronize or overwrite the existing Vercel environment, and it does not enroll the reviewer app in the new repository. Do not turn on automatic Git deployments.
+
+After independent review of the workflow, the maintainer must configure a protected `production` GitHub environment restricted to main and authorize the necessary deployment credentials directly in GitHub:
+
+- `VERCEL_TOKEN`: approved Vercel deployment credential.
+- `VERCEL_AUTOMATION_BYPASS_SECRET`: existing approved protected-staging smoke-test credential.
+- `REVIEWER_WEBHOOK_SECRET`: optional existing credential for the signed ping test; never use this to enroll the unified repository.
+
+Do not copy credentials through source, logs, issue comments or chat. Existing Vercel service configuration is preserved. Activate the repository-specific `ODDMASH_UNIFIED_CUTOVER_ENABLED` and existing `VERCEL_DEPLOY_ENABLED` variables only when qualification is authorized. They are deliberately not configured by a source change. Before any publish, review the latest stable legacy release and the intended new tag. Dispatch the reviewed exact release tag and SHA from main with `promote=false` for staging, only after the protected environment is ready. A successful staged result is not a production promotion. The subsequent explicitly authorized `promote=true` run stages and smoke-tests its own exact build before promoting it. Leave legacy deployment and rollback available.
+
+Reviewer enrollment is a separate step after the production migration is verified.
 
 ## Ordered cutover gates
 

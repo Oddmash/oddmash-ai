@@ -8,6 +8,6 @@ const api = async path => {
   if (!response.ok) throw new Error('Release metadata could not be verified');
   return response.json();
 };
-const { tag, commit } = await validateRelease({ repository: process.env.GITHUB_REPOSITORY ?? '', actorId: process.env.GITHUB_ACTOR_ID ?? '', event: process.env.GITHUB_EVENT_NAME ?? '', ref: process.env.GITHUB_REF ?? '', eventSha: process.env.GITHUB_SHA ?? '', tag: process.env.RELEASE_TAG ?? '', expectedCommit: process.env.EXPECTED_RELEASE_COMMIT }, api);
+const { tag, commit } = await validateRelease({ repository: process.env.GITHUB_REPOSITORY ?? '', repositoryId: process.env.GITHUB_REPOSITORY_ID ?? '', actorId: process.env.GITHUB_ACTOR_ID ?? '', event: process.env.GITHUB_EVENT_NAME ?? '', ref: process.env.GITHUB_REF ?? '', eventSha: process.env.GITHUB_SHA ?? '', tag: process.env.RELEASE_TAG ?? '', expectedCommit: process.env.EXPECTED_RELEASE_COMMIT }, api);
 console.log(`Verified release ${tag} at ${commit}`);
 if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `tag=${tag}\ncommit=${commit}\n`);
