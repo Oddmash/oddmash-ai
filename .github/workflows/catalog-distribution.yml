@@ -1,0 +1,48 @@
+name: Catalog distribution
+on:
+  pull_request:
+    branches: [main, migration/unified-source]
+    paths:
+      - 'catalog/**'
+      - '.github/workflows/catalog-distribution.yml'
+  push:
+    tags: ['skills-v*']
+permissions:
+  contents: read
+jobs:
+  package:
+    if: github.repository == 'Oddmash/oddmash-ai' && (github.event_name == 'pull_request' || github.actor_id == '135234546')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify catalog and installer
+        working-directory: catalog
+        run: |
+          python3 scripts/install.py --validate
+          python3 -m unittest discover -s tests
+      - name: Build immutable catalog archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision="$(git rev-parse HEAD)"
+          output="$RUNNER_TEMP/catalog-release"
+          mkdir -p "$output"
+          args=()
+          if [[ "$GITHUB_EVENT_NAME" == push ]]; then
+            args=(--tag "$GITHUB_REF_NAME")
+          fi
+          python3 catalog/scripts/package.py --revision "$revision" --output "$output/oddmash-skills.zip" "${args[@]}"
+          cd "$output"
+          sha256sum oddmash-skills.zip > oddmash-skills.zip.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: github.event_name == 'push'
+        with:
+          name: oddmash-skills-${{ github.ref_name }}
+          path: |
+            ${{ runner.temp }}/catalog-release/oddmash-skills.zip
+            ${{ runner.temp }}/catalog-release/oddmash-skills.zip.sha256
+          if-no-files-found: error
