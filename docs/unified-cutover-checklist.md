@@ -33,6 +33,12 @@ Observed 2026-11-27 KST. Recheck at cutover before transferring or closing anyth
 
 Move open issues only after checking claims and contributor involvement; retain original URLs and historical discussions. Complete or explicitly hand off open PRs in the original repository because Git imports do not transfer their review conversation.
 
+## Observed production baseline
+
+Read-only Vercel and GitHub inspection on 2026-11-27 KST identified the existing project `oddmash-reviewer` (Node.js 24.x). Its latest production deployment is READY and matches legacy release [v0.28.1](https://github.com/Oddmash/oddmash-agents/releases/tag/v0.28.1), commit `daab492992fc442b7bc7a423546d9b9d8678f0a7`. The recorded [promotion workflow](https://github.com/Oddmash/oddmash-agents/actions/runs/45842806180) identifies the verified deployment. The project has no Git-linked repository in its metadata, so the existing release-driven CI remains the deployment source; do not enable automatic Git deployments during the migration.
+
+Recheck this baseline and the actual active deployment immediately before any staged promotion. Production credentials and owner session settings were not inspected or modified.
+
 ## Ordered cutover gates
 
 1. Merge the verified source integration and reviewed follow-up PRs with normal merge commits. Recheck source main revisions against the original repositories before finalizing the baseline; import any approved later changes without overwriting work.
