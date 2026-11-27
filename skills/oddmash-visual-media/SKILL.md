@@ -1,6 +1,6 @@
 ---
 name: oddmash-visual-media
-description: Plan, create and verify instructional videos, animated diagrams, technical illustrations, and embedded visual demonstrations that communicate a mechanism without redundant presentation UI.
+description: Plan, create and verify instructional videos, architecture and sequence diagrams, technical illustrations, interactive examples, and embedded visual demonstrations that communicate a mechanism without redundant presentation UI.
 ---
 
 # Visual media
@@ -13,6 +13,10 @@ Own visual explanation production. Use this skill when an article, documentation
 - Use a static diagram for stable relationships, a short animation for changes over time, and an interactive example when the reader must manipulate inputs to understand the result.
 - Prefer an actual recorded or reproducible implementation when demonstrating product behavior. Do not invent measured outcomes or imply a schematic is a real measurement.
 - Sketch the initial state, meaningful intermediate states, outcome, and reset before producing the media.
+
+## Choose the visual structure
+
+For technical diagrams, architecture, comparisons, state changes, or a request to improve an existing visual explanation, read [mechanism-specific diagrams](references/mechanism-diagrams.md) before drawing. Choose the visual grammar from the relationship, not from the available component template. Sketch the actors/entities, meaningful relations, boundary and outcome; choose a simple alternative when it communicates the same facts. Do not make a visual solely to repeat adjacent prose.
 
 ## Compose the scene
 
@@ -33,6 +37,7 @@ Own visual explanation production. Use this skill when an article, documentation
 
 ## Verify the artifact
 
+- Review a rendered technical explanation against the reader question and the mechanism-specific acceptance gate in the reference. A visually neat card sequence or passing overflow test is not sufficient if the relationship, alternatives, or state changes remain hidden.
 - Inspect the actual appearance at the beginning, intermediate frames, outcome, and loop boundary, not only the source or a final still.
 - Verify that the mechanism remains technically accurate, labels remain readable, geometry does not jump, and playback controls work by keyboard.
 - Sample just before and after input. Verify the cue is visible before the action, the prior result survives the wait, and the response follows the simulated input. Keep the complete states understandable without motion.

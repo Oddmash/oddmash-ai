@@ -16,6 +16,10 @@ Inspect the rendered interface at representative desktop and narrow widths. Iden
 
 - Audit final geometry across skeleton, loading and loaded states, consistent control heights/padding/icon alignment, focus rings, truncation with accessible access to complete content, responsive spacing, safe areas, scroll and overlay layering. Compare empty/error and dense content alongside the happy path. Keep placeholders and decorative motion subordinate to meaningful content.
 
+## Technical visual review
+
+When reviewing diagrams, examples, or visual demonstrations, use the mechanism and visual structure selected by [visual media](../oddmash-visual-media/SKILL.md). Inspect the rendered scene, not only its source or its prose. Check that the focal relationship, direction, labels, boundaries and meaningful differences are visible without reading the adjacent explanation. Compare a simpler alternative: remove decorative cards, repeated text, arrows that do not encode a relationship, and motion that does not expose a change. Preserve legitimate simple sequences; do not demand complexity for its own sake. Verify the scene at its actual embedded width and narrow layout, with accessible equivalent content and honest provenance. Record meaning and readability acceptance separately from functional CI.
+
 ## Subtractive visual review
 
 For a substantial landing change, apply the [product-specific website acceptance gate](../oddmash-brand-design/references/product-website-direction.md#acceptance-before-handoff). Record concrete visible evidence for the primary action, hero artifact, full-page hierarchy and narrow layout. Investigate a large unexplained empty region, clipped focus, misaligned control/icon, or unsolicited sticky/scroll-following content before declaring ready.
